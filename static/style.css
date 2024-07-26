@@ -1,0 +1,223 @@
+body { 
+    padding-top: 56px; 
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.left-aligned { margin-left: auto; }
+.bg-dark { background-color: #343a40 !important; }
+.bg-hero { background-color: #45b06cff; }
+
+/* CALLOUT */
+.bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
+.bd-callout h4 { margin-bottom:.25rem }
+.bd-callout p:last-child { margin-bottom:0 }
+.bd-callout code { border-radius:.25rem }
+.bd-callout+.bd-callout { margin-top:-.25rem }
+.bd-callout-info { border-left-color:#5bc0de }
+.bd-callout-warning { border-left-color:#f0ad4e }
+.bd-callout-danger { border-left-color:#d9534f }
+
+/* footer */
+footer a { color: white; font-weight: bold; text-decoration: none; }
+footer a:hover { color: white; text-decoration: underline; }
+
+
+
+:root{
+    --background: rgba(0,0,0);          /*主页面背景色*/
+    --manu-back: rgba(191,142,104);         /*导航栏背景色*/
+    --manu-text: rgba(246,230,213);         /*导航栏文字*/
+    --manu-text-hover-back: rgba(162,195,213);      /*选项悬停背景*/
+    --manu-text-text-hover: rgba(0,68,116);         /*文字悬停*/
+    --down-manu-back: rgba(191,142,104,0.9);        /*下拉菜单背景*/
+    --sidebar-background:rgba(0,0,0);               /*侧边栏背景*/
+    --sidebar-text:rgba(0,0,0);                     /*侧边栏文字*/
+    --sidebar-text-hover-back:rgba(0,0,0);          /*侧边选项悬停*/
+    --sidebar-hover-text:rgba(0,0,0);               /*侧边文字悬停*/
+    --article-background:rgba(0,0,0);                  /*文章背景*/
+
+  }  
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.head{
+    width: 1200px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto ;
+    margin-bottom: 16px;
+    height: 68px;
+    border-radius: 10px;
+    background-color: var(--manu-back);
+    display: flex; /* 添加Flexbox布局 */
+    align-items: center; /* 垂直居中子元素 */
+    justify-content: center;
+}
+
+.head-container{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name{
+    font-size: 20px;
+}
+.head-container a{
+    text-decoration: none;
+    color: var(--manu-text);
+}
+
+.menu-container{
+    display: flex;
+}
+
+.menu-container a{
+    height: 40px;
+    font-size: 20px; 
+    padding: 6px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.menu-container a:hover,
+ .menu-container a.active{
+    color: var(--manu-text-text-hover);
+    background-color: var(--manu-text-hover-back);
+
+}
+
+/* .dropdown-menu{
+    display: none;
+}
+
+.menu-container li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    background-color: #393939;
+  }
+
+  .menu-container li:hover .dropdown-menu li{
+    display: block;
+    margin: 10px; 
+  } */
+
+  .menu-item {
+    position: relative;
+    list-style-type:none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    z-index: 999;
+    background-color:  var(--down-manu-back);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.menu-item:hover .dropdown-menu {
+    display: block;
+}
+
+
+.menu-item:hover .dropdown-menu li {
+    margin: 10px;
+    padding: 5px 15px;
+}
+
+
+/*description*/
+.main-container {
+    display: flex;
+    justify-content: start;
+    width: 1200px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto ;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%; /* 如果不是全屏，可以设置具体高度或使用min-height */
+    background: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    /* 移除了position: fixed; */
+    /* 可以添加margin-top: 68px; 如果.head的高度是68px，这样sidebar就会在head下面开始 */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a:hover {
+    background-color: #ddd;
+}
+
+.des-container {
+    padding: 20px;
+    width: 80%;
+}
+
+.des-container h1 {
+    border-bottom: 3px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.main-hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.des-item h2 {
+    margin-top: 40px;
+}
+
+.des-item p {
+    text-indent: 2em; 
+}
+
+
+
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: opacity 0.3s; /* 平滑过渡效果 */
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+.to-top:hover {
+    background-color: #555;
+}
