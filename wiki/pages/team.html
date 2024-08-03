@@ -1,34 +1,214 @@
 {% extends "layout.html" %}
 
-{% block title %}Team{% endblock %}
-{% block lead %}On this page you can introduce your team members, instructors, and advisors.{% endblock %}
-
 {% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team</title>
+  <style>
 
-<div class="row">
-  <div class="col-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Include pictures of your teammates, don't forget instructors and advisors!</li>
-      <li>You can add a small biography or a few words from each team member, to tell us what you like, and what motivated you to participate in iGEM.</li>
-      <li>Take team pictures! Show us your school, your lab and little bit of your city.</li>
-      <li>Remember that image galleries can help you showcase many pictures while saving space.</li>
-    </ul>
-    <div class="bd-callout bd-callout-info"><strong>Important:</strong> Your wiki pages will be archived at the end of the iGEM season and this content will remain online. Please keep this in mind as you post photos and personal information on this page.</div>
+    .team-container{
+      background-color: #333333;
+    }
+
+    .photo-container{
+      position: relative;  
+      height: 100vh; /* 使用视口高度单位，确保全屏 */  
+      width: 100%;
+      background-image: url('/static/picture/team-grouph.jpg') ;
+      background-repeat: no-repeat;  
+      background-size: cover;  
+      background-position: center;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center; 
+      margin-bottom: 20px;
+    }
+
+    .grouph-photo{
+      width: 100%;
+      z-index: -99;
+    }
+
+    .team-h1{
+      text-align: center;  
+      color: #fff; 
+      /* background-color: rgba(0, 0, 0, 0.5);  
+      padding: 20px;  
+      border-radius: 10px; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    }
+
+    .team-h1 h1{
+      font-size: 80px;
+    }
+
+
+
+    .team-members{
+      width: 80%;
+      margin: auto;
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;
+      justify-content: center; 
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 10px; 
+      padding: 20px;  
+      position: relative;  
+    }
+
+    .card-container{
+      display: flex; 
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 20px;  
+    }
+
+
+    .animate-card {
+      position: relative;
+      width: 200px;  
+      height: 300px; 
+      margin: 20px 30px 0;
+      border-radius: 10px;
+      order: 0;  
+      flex-basis: auto;  
+      flex-grow: 0;  
+      flex-shrink: 1;  
+      overflow: hidden;  
+    }
+
+    .animate-card-52 .animate-card__layer {
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+    }
+
+    .animate-card-52 .animate-card__layer > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .animate-card-52 .animate-card__sublayer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 100px 20px 10px;
+      transform: translateY(100%);
+      justify-content: center;
+      background-color: #fff;
+      color: #000;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .animate-card-52:hover .animate-card__layer {
+      position: relative;
+      transform: scale(0.3) translateY(-110%);
+      border: 6px solid rgba(255, 255, 255, 0.9);
+      z-index: 9;
+    }
+
+    .animate-card-52:hover .animate-card__sublayer {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+
+    .animate-card-52:hover .animate-card__layer img{
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .personal-introduce{
+      width: 80%;
+      font-size: small;
+    }
+  </style>
+</head>
+<body>
+  <div class="team-container">
+    <div class="photo-container">
+      <div class="team-h1">
+        <h1>Team</h1>
+      </div>
+    </div>
+
+    <div class="team-members">
+      <h1>Team members</h1>
+    
+
+      <div class="card-container">
+        <div class="animate-card animate-card-52">
+          <div class="animate-card__layer">
+              <img src="../../static/picture/member/qiu.png"/>
+          </div>
+      
+          <div class="animate-card__sublayer">
+              <div>
+                <h3>Ziying Qiu</h3>
+                <p>Team leader</p>
+              </div>
+              <div class="personal-introduce">
+                <p>This is my second year participating in the iGEM competition. This year I played a more important role and had a more exciting and unforgettable experience. IGEM has cultivated my interest in synthetic biology, and I am very grateful for the opportunity to meet iGEM!
+                </p>
+              </div>
+          </div>
+        </div>
+  
+        <div class="animate-card animate-card-52">
+          <div class="animate-card__layer">
+              <img src="../../static/picture/team1.jpg"/>
+          </div>
+      
+          <div class="animate-card__sublayer">
+              <h3>
+                  张三
+              </h3>
+              <div class="personal-introduce">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem veniam dolores nam molestiae quidem, nisi quae ut nihil velit ipsum esse sapiente quam maiores quasi mollitia laudantium voluptates dolor!
+                </p>
+              </div>
+          </div>
+        </div>
+  
+        <div class="animate-card animate-card-52">
+          <div class="animate-card__layer">
+              <img src="../../static/picture/team1.jpg"/>
+          </div>
+      
+          <div class="animate-card__sublayer">
+              <h3>
+                  张三
+              </h3>
+              <div class="personal-introduce">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem veniam dolores nam molestiae quidem, nisi quae ut nihil velit ipsum esse sapiente quam maiores quasi mollitia laudantium voluptates dolor!
+                </p>
+              </div>
+          </div>
+        </div>
+  
+
+  
+      </div>
+
+
+    </div>
+
+    
+
+    
   </div>
-  <div class="col-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:CU/Team">2019 CU</a></li>
-      <li><a href="https://2019.igem.org/Team:UANL/Team">2019 UANL</a></li>
-      <li><a href="https://2019.igem.org/Team:William_and_Mary/Team">2019 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:BOKU-Vienna/Team">2020 BOKU Vienna </a></li>
-      <li><a href="https://2020.igem.org/Team:CAU_China/Team_Member">2020 CAU China</a></li>
-      <li><a href="https://2020.igem.org/Team:Lethbridge/Members">2020 Lethbridge</a></li>
-    </ul>
-  </div>
-</div>
+</body>
+</html>
+
+  
+
 
 {% endblock %}

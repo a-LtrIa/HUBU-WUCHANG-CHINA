@@ -221,3 +221,52 @@ footer a:hover { color: white; text-decoration: underline; }
 .to-top:hover {
     background-color: #555;
 }
+
+
+
+/* team */
+
+.animate-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .animate-card-52 .animate-card__layer {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+  }
+  
+  .animate-card-52 .animate-card__layer > img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .animate-card-52 .animate-card__sublayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px 10px;
+    transform: translateY(100%);
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .animate-card-52:hover .animate-card__layer {
+    position: relative;
+    transform: scale(0.3) translateY(-110%);
+    border: 6px solid rgba(255, 255, 255, 0.9);
+    z-index: 9;
+  }
+  
+  .animate-card-52:hover .animate-card__sublayer {
+    transform: translateY(0px);
+    opacity: 1;
+  }
