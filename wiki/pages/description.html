@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
@@ -13,16 +16,43 @@ body {
     padding: 0;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 100%;
-    background: #f4f4f4;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+.header-container{
+    position: relative;  
+      height: 100vh; /* 使用视口高度单位，确保全屏 */  
+      width: 100%;
+      background-image: url('/static/picture/head-example.png') ;
+      background-repeat: no-repeat;  
+      background-size: cover;  
+      background-position: center;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center; 
+      margin-bottom: 20px;
 }
+
+.header-title h1{
+    text-align: center;  
+    color: #fff; 
+    font-size: 50px;
+}
+
+.content-container{
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto ;
+}
+
+
+.sidebar {
+    position: relative;
+    width: 20%;
+    height: 100%; /* 如果不是全屏，可以设置具体高度或使用min-height */
+    background: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+   }
 
 .sidebar ul {
     list-style: none;
@@ -36,33 +66,21 @@ body {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
-
 .sidebar ul li a:hover {
     background-color: #ddd;
+    border-radius: 10px;
 }
 
-.des-container {
-    margin-left: 220px;
+.main-text {
     padding: 20px;
+    width: 80%;
 }
 
-.des-container h1 {
-    border-bottom: 3px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
 
-.main-hr {
-    margin: 20px 0;
-    border: 0;
-    border-top: 1px solid #eee;
-}
 
-.des-item h2 {
-    margin-top: 40px;
-}
 
-.des-item p {
+
+.text-item p {
     text-indent: 2em; 
 }
 
@@ -82,54 +100,68 @@ body {
 
 </head>  
 <body>  
-  
-<div class="sidebar">  
-    <ul>  
-        <li><a href="#section1">Why we want to do that</a></li>  
-        <li><a href="#section2">What we have done</a></li>  
-        <li><a href="#section3">We are going to do</a></li>  
-    </ul>  
-</div>  
-  
-<div class="des-container">  
-    <h1 id="head">Description</h1>  
-    <hr class="main-hr">
-    <div class="des-item">  
-        <h2 id="section1">section1</h2>  
-        <hr>  
-            <p>&nbsp;&nbsp;Lysine is involved in protein synthesis and the β-oxidation of fatty acid.
-                 Lysine insufficiency will affect the composition and utilization of amino acids. 
-                 As rice is the staple food of 3.5 billion people in the world, increasing the protein
-                  and lysine content of rice is of great significance to underdeveloped animal-husbandry
-                   countries and regions with rice as staple food.<br>
-                &nbsp;&nbsp;Allergic diseases are the key diseases that need prevention and treatment in the 21st century.
-                 Research shows that more than 10% of people in Japan have different degrees of allergic
-                  reactions to rice, and the data is up to 30% in Malaysia. Therefore, food allergy is a food safety
-                   problem that needs attention for high protein food.</p>
-        <h2 id="section2">section2</h2>
-        <hr>
-            <p>&nbsp;&nbsp;We polyploidized diploid rice into tetraploid by colchicine treatment, 
-                and used CRISPR/Cas9  gene editing technology to site edit the gluten and globulin genes of tetraploid rice,
-                 screened and evaluated the quality of mutants. Finally, we selected the digenic mutant of globulin and gluten genes, 
-                 because it met our expectations of improving the nutritional quality of rice and food safety.<br></p>
-        <h2 id="section3">section3</h2>
-        <hr>
-            <p>
-                &nbsp;&nbsp;In terms of ihuman practice, we randomly invite rice vendors and consumers do questionnaire and ask to understand
-                 the consumer consumption habits and market demand, and through the statistical electric business platform in rice nutrition data
-                found the current Chinese rice widespread low protein content, and Chinese consumers generally do not pay attention to the nutritional
-                value of rice. In the process of perfecting the experiment, we also consulted the nutrition experts. In the summer vacation, we will
-                go to agricultural products and seed companies, Academy of Agricultural Sciences, Grain Bureau, Department of Agriculture and other
-                institutions and units for investigation, and further consult experts and scholars in the rice industry to help us optimize our
-                projects. On the other hand, we had in-depth exchanges with the governor, the mayor, the agricultural enterprises, the policy
-                consultants, the staff of the academy, the consumers and other stakeholders. <br>
+    <div class="text-container">
+        <div class="header-container">
+            <div class="header-title">
+                <h1>Description</h1>
+            </div>
+        </div>
 
-            </p>
-    </div>  
+        <div class="content-container">
+
+            <div class="sidebar">  
+                <ul>  
+                    <li><a href="#section1">Why we want to do that</a></li>  
+                    <li><a href="#section2">What we have done</a></li>  
+                    <li><a href="#section3">We are going to do</a></li>  
+                </ul>  
+            </div>  
+              
+            <div class="main-text">  
+                <h1 id="head">Description</h1>  
+                <div class="text-item">  
+                    <h2 id="section1">section1</h2>  
+                        <p>&nbsp;&nbsp;Lysine is involved in protein synthesis and the β-oxidation of fatty acid.
+                             Lysine insufficiency will affect the composition and utilization of amino acids. 
+                             As rice is the staple food of 3.5 billion people in the world, increasing the protein
+                              and lysine content of rice is of great significance to underdeveloped animal-husbandry
+                               countries and regions with rice as staple food.<br>
+                            &nbsp;&nbsp;Allergic diseases are the key diseases that need prevention and treatment in the 21st century.
+                             Research shows that more than 10% of people in Japan have different degrees of allergic
+                              reactions to rice, and the data is up to 30% in Malaysia. Therefore, food allergy is a food safety
+                               problem that needs attention for high protein food.</p>
+                    <h2 id="section2">section2</h2>
+                        <p>&nbsp;&nbsp;We polyploidized diploid rice into tetraploid by colchicine treatment, 
+                            and used CRISPR/Cas9  gene editing technology to site edit the gluten and globulin genes of tetraploid rice,
+                             screened and evaluated the quality of mutants. Finally, we selected the digenic mutant of globulin and gluten genes, 
+                             because it met our expectations of improving the nutritional quality of rice and food safety.<br></p>
+                    <h2 id="section3">section3</h2>
+                        <p>
+                            &nbsp;&nbsp;In terms of ihuman practice, we randomly invite rice vendors and consumers do questionnaire and ask to understand
+                             the consumer consumption habits and market demand, and through the statistical electric business platform in rice nutrition data
+                            found the current Chinese rice widespread low protein content, and Chinese consumers generally do not pay attention to the nutritional
+                            value of rice. In the process of perfecting the experiment, we also consulted the nutrition experts. In the summer vacation, we will
+                            go to agricultural products and seed companies, Academy of Agricultural Sciences, Grain Bureau, Department of Agriculture and other
+                            institutions and units for investigation, and further consult experts and scholars in the rice industry to help us optimize our
+                            projects. On the other hand, we had in-depth exchanges with the governor, the mayor, the agricultural enterprises, the policy
+                            consultants, the staff of the academy, the consumers and other stakeholders. <br>
+            
+                        </p>
+                </div>  
+              
+              
+                <a href="#head" class="to-top">返回顶部</a>  
+            </div>  
+        </div>
+
+    </div>
   
-  
-    <a href="#head" class="to-top">返回顶部</a>  
-</div>  
+
   
 </body>  
 </html>
+
+
+{% extends "layout.html" %}
+{% block page_content %}
+{% endblock %}
