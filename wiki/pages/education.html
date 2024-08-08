@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
@@ -60,16 +58,30 @@
 }
 
 .sidebar.fixed {
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   position: fixed;
   top: 0;
   left: 0;
   width: 20%;
 }
 
+
 .main-text.fixed{
   margin-top: 0px;
   width: 80%;
   margin-left: 20%;
+}
+
+.main-text.down{
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
 }
 
 
@@ -124,334 +136,391 @@ margin-left: 20px;
 }
 
 .to-top {
-  display: block;
-  text-align: right;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #000000;
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.to-top:hover {
-  text-decoration: underline;
+.to-top.show {
+  display: block;
+  opacity: 1;
 }
+
     
 </style>
 
 </head>  
 <body>  
+  <div>
     <div class="text-container">
-        <div class="header-container">
-            <div class="header-title">
-                <h1>Education</h1>
-            </div>
-        </div>
-
-        <hr class="partition-line">
-
-        <div class="content-container">
-
-            <div class="sidebar">  
-                <ul>  
-                    <li><a href="#section1">Science popularization month of synthetic biology</a></li>  
-                    <li><a href="#1.1">The Background</a></li>
-                    <li><a href="#1.2">Parties and media</a></li>
-                    <li><a href="#1.3">Event preparation</a></li>
-                    <li><a href="#1.4">Activity content and form</a></li>
-                    <li><a href="#1.5">popularization lecture</a></li>
-                    <li><a href="#1.6">visit the laboratory</a></li>
-                    <li><a href="#1.7">workshop experience</a></li>
-                    <li><a href="#1.8">Purpose</a></li>
-                    <li><a href="#1.9">Children's day science park party</a></li>
-                    <li><a href="#1.91">Participants and teamwork</a></li>
-                    <li><a href="#1.92">Activity effectiveness and reflection</a></li>
-
-                    <li><a href="#section2">Speech Contest</a></li>  
-                    <li><a href="#section3">Volunteer Teaching</a></li> 
-                    <li><a href="section4"></a>Lectures</li> 
-                </ul>  
-            </div>  
-            <div class="main-text">  
-                <div class="text-item">  
-                    <h2 id="section1">Science popularization month of synthetic biology</h2> 
-                      <h3 id="1.1">The Background</h3>
-                      <p>In the course of the survey, we found that at present, the Chinese people still have great misunderstandings
-                         about synthetic biology technology, and science popularization activities need to be more interesting and 
-                         diversified. In order to popularize the knowledge of synthetic biology, improve the public's interest and 
-                         cognition of life science, and promote the wide application of synthetic biology technology in society, our
-                         team planned and organized the general month of synthetic biology.
-                        <br>
-                      </p>
-                      <h3 id="1.2">Parties and media</h3>
-                      <p>
-                        In order to solve the problem of activity funds and promotion degree, we sought the support of funds or activity 
-                        platforms from the Chinese society of cell biology, Hubei society of cell biology, Hubei provincial science 
-                        popularization education base, College of life sciences, Hubei University, the State Key Laboratory of 
-                        biocatalysis and Enzyme Engineering jointly built by the Province and the Ministry, the national experimental 
-                        teaching demonstration center of chemical and biological engineering technology of Hubei University, and the 
-                        Committee of the Art College of Hubei University of the Communist Youth League.
-                        <br>
-                        In the middle of the event, we published the personal blog of the event on 
-                        <a href="http://h5.jp.cjn.cn/#/h5/news?informationId=3978908&sourceType=0&type=android&isDetail=0">Changjiang online</a>
-                        ,which was widely praised by netizens. The editorial department of Changjiang Daily immediately began to close our event 
-                        and carried out media promotion for us.
-                        <br>
-                        After the event, the official wechat official account <a href="https://mp.weixin.qq.com/s/XJUPsEvEXwGu3zgAbBCxtQ">"cell world"</a>
-                        of the Chinese Society for cell biology also released 
-                        the event tweet, expressing its affirmation of the effectiveness of our event.
-                      </p>
-                      <h3 id="1.3">Event preparation</h3>
-                      <p>
-                        We invited the iGEM teams hubuloong CHN, China Hubu Wuhan, tjusls China and CUG China to jointly organize the activities. 
-                        They brought their laboratory research and iGEM projects to the activities, which broadened the science popularization 
-                        field of the activities.
-                      </p>
-                      <div class="photo-box">
-                        <img src="/static/picture/education1.png" alt="">
-                        <img src="/static/picture/education2.png" alt="">
-                        <img src="/static/picture/education3.png" alt="">
-                      </div>
-                      <h3 id="1.4">Activity content and form</h3>
-                      <p>The event took the form of a carnival and lasted about one month, including online training, laboratory open day, biological art creative competition, children's day science park.
-                        Online training on May 8 and May 10, 20:30-22:30
-                        Audience - all the people who will enter the laboratory and the students of the art school of Hubei University who have signed up for the biological art creative competition
-                      </p>
-                      <div class="photo-box" style="height: 200px;">
-                        <img src="/static/picture/education4.png" alt="">
-                        <img src="/static/picture/education5.png" alt="">
-                      </div>
-                      <p style="text-align:right; font-size: 12px;">14:00-18:00 on May 18 laboratory open day</p>
-                      <h4 1.5>Part 1- multimedia classroom science popularization lecture</h4>
-                      <div class="photo-box">
-                        <img src="/static/picture/education6.png" alt="">
-                      </div>
-
-                      <h4 id="1.6">Part II visit the laboratory</h4>
-                      <div class="photo-box">
-                        <img src="/static/picture/education7.png" alt="">
-                        <img src="/static/picture/education8.png" alt="">
-                      </div>
-                      <p>
-                        The members of each team introduced the instruments in the laboratory and their use methods and principles to the visitors, and demonstrated the use of simple instruments such as pipette guns.
-                      </p>
-
-                      <h4 id=" 1.7">Part III workshop experience</h4>
-                      <div class="photo-box">
-                        <img src="/static/picture/education9.png" alt="">
-                        <img src="/static/picture/education10.png" alt="">
-                      </div>
-                      <div class="photo-box">
-                        <img src="/static/picture/education11.png" alt="">
-                        <img src="/static/picture/education12.png" alt="">
-                      </div>
-                      <p style="text-align: right; font-size: 12px;">From May 18 to May 24, solicit contributions for the biological art creative competition</p>
-                      <p>Experience project
-                        Making butterfly specimens
-                        Observe the permanent loading of microorganisms
-                        Observation of plant tissue sections Yongjie mounting
-                        Paramecium temporary fashion films were made, and their movements were observed with a dark field microscope
-                        The brown algae were temporarily mounted, and its cytoplasmic circulation was observed with a phase contrast microscope, and its autofluorescence was observed with a fluorescence microscope
-                        During the experience, the experimental group members of each team will teach and operate.
-                      </p>
-                      <h4 id="1.8">Purpose</h4>
-                      <p>
-                        1. We hope to guide college students majoring in art to interpret their attitude towards synthetic biology changing the world from their professional teaching and reading. We have held the competition as a "campus version of iGEM for cross-border art". We hope that the contestants can think with us about the current or potential survival problems faced by human beings in the world and how we can make our contributions from the perspective of synthetic biology. <br>
-                        2. We set up the track according to iGEM village, and asked the contestants to reflect their solutions or reflections in their works. We know that for them, it is likely to be more difficult to give a scientific and feasible solution, but this is what we hope they can be guided to do. In order to encourage them, we have been in close contact with them. We answer any questions on the basic knowledge of synthetic biology for them, and we have set the evaluation standard that gives solutions will score higher than reflection (jump to the next part of the scoring standard). We hope to find art majors who are interested in biological art in the competition. If they can further study in the field of biological art and further exchange and study with synthetic biology in the future, we believe that our competition is a real success. <br>
-                        3. We set the competition after the open day and hope that all contestants can take the competition as the practice of science popularization harvest on the laboratory open day, help them understand and master scientific knowledge, apply what they have learned to creation, and cultivate rigorous scientific spirit.
-                      </p>
-                      <br>
-                      <p>From May 24 to May 28, six teachers from the College of life sciences and the College of Arts of Hubei University reviewed the works (insert the selected works and the corresponding theme introduction of the works) <br>
-                        This is a serious interdisciplinary exchange, not a children's play. At the same time, we hope that the teachers of the two colleges can also experience the charm of biological art in the work review.
-                      </p>
-                      <p>
-                        Scoring criteria——comprehensive score =25% × scientific score +25% × speculative score +25% × artistic score +25% × creative score <br>
-                        Scientificity—— the theme of the work conforms to the biological principle. Theoretically, in the future, the bioethical living works of biological art can be made by modifying organisms according to the design <br>
-                        Speculative—— the depth of the author's solutions to or reflections on the current or potential survival problems facing mankind around the world. In this dimension, the works that propose solutions need to score 30% higher than the works that propose reflections
-                        Artistry——color, meaning discussion, open thinking <br>
-                        Creativity—— the creativity and independence of the author's thinking embodied in the work <br>
-                     </p>
-                     <div class="photo-box" style="height: 400px;">
-                      <img src="/static/picture/education13.png" alt="">
-                    </div>
-
-                    <h3 id="1.9">Children's day science park party on June 1</h3>
-                    <p>
-                      Children's day science park party on June 1
-                      Audience: community residents, parent-child groups, retired teachers of College of life sciences, Hubei University <br>
-                      Biological art creative exhibition area: Works Exhibition, herbarium exhibition, interactive games<br>
-                      Popular science exhibition area: iGEM team project and Challenge Cup project interactive exhibition area, herbarium exhibition, interactive games<br>
-                      The plant specimens were provided by the 2022 students from the College of life sciences of Hubei University who went to Lushan scenic spot in Jiangxi Province for field practice
-                      Interactive game project<br>
-                      Virus, DNA super light clay model manual teaching<br>
-                      Base complementary pairing ferrule<br>
-                      Text text pairing of terms in synthetic biology<br>
-                      Reading biology popular science articles<br>
-                      Biology you draw I guess<br>
-
-                    </p>
-                    <div class="photo-box" style="height: 200px;">
-                      <img src="/static/picture/education14.png" alt="">
-                      <img src="/static/picture/education15.png" alt="">
-                      <img src="/static/picture/education16.png" alt="">
-                    </div>
-                    <div class="photo-box">
-                      <img src="/static/picture/education17.png" alt="">
-                      <img src="/static/picture/education18.png" alt="">
-                    </div>
-
-                    <h3 id="1.91">Participants and teamwork</h3>
-
-                    <p>
-                      This event attracted primary and secondary school students, parents, college students, 
-                      graduate students, educators, science and technology lovers, etc. At the same time, we have also received the support
-                      and help of many cooperation units, including schools, social academic groups, media, etc. In the process of the event,
-                      the volunteer team played an important role. They were responsible for reception, navigation and other work, and 
-                      provided warm and thoughtful services to the tourists participating in the event. The team members worked closely 
-                      together to complete the task of the event and played a good role in educating all kinds of audiences of the event.
-                    </p>
-
-                    <h3 id="1.92">Activity effectiveness and reflection</h3>
-                    <p>
-                      We collected feedback from the event audience through questionnaires and random interviews at the event site, 
-                      and we are sincerely happy that they have gained something from the event. There is a little boy wearing blue 
-                      clothes who has been unwilling to leave our team's booth. From being inspired by interactive games to constantly 
-                      asking about the technology used in our project, our team's resident member Jia Zhixin vividly introduced and 
-                      answered for him. When he left, he was also excited to share his gains with his parents. (Insert pie chart of 
-                      questionnaire statistics results and on-site interview video)<be>
-                      After the activity, our experimental team and art team members also went to visit the graduation exhibition of 
-                      the Experimental Art School of Hubei Academy of Fine Arts, and in August, we went to Shenzhen to participate in 
-                      the bio art forum and lectures jointly held by the Chinese Academy of Sciences Shenzhen Advanced Research Institute 
-                      and the Central Academy of Fine Arts, and visited the exhibition to discuss and reflect on the application and 
-                      development prospects of synthetic biology in the field of bio art. Due to limited planning time and equipment, 
-                      we regret that we were unable to provide participants with the opportunity to use and modify living organisms for 
-                      creative purposes in this event. According to the "Biological Art Manifesto", we plan to hold another campus 
-                      biological art competition next year. At that time, we will provide experimental space for participants and invite 
-                      students from the School of Life Sciences to collaborate with them to develop experimental plans, helping them 
-                      create truly meaningful biological art works!<br>                        
-                    </p>
-
-                    <h2 id="section2">Speech Contest</h2>
-                      <p>
-                        In China, speech competitions with party and government themes are popular ideological education activities 
-                        among Chinese teachers and students on university campuses, regardless of the major or college. We have found 
-                        that we can take advantage of this opportunity to introduce our project and plant synthetic biology to non 
-                        biological teachers and students. In terms of speech format, we will take China's food security as the starting 
-                        point.   In the speech, we talked to the audience about the development of rice breeding technology and the 
-                        research process of polyploid rice, and introduced our project to the audience. At the end of our speech, we 
-                        call on more college students and young people to actively engage in the fields of synthetic biology and 
-                        agriculture, in order to promote the development of agriculture and society.
-                      </p>
-                      <div class="photo-box" style="height: 500px;" >
-                        <img src="/static/picture/education21.png" alt="">
-                      </div>
-                      <div class="photo-box" style="height: 210px;">
-                        <img src="/static/picture/education19.png" alt="">
-                        <img src="/static/picture/education20.png" alt="">
-                      </div>
-                    <h2 id="section3">Volunteer Teaching</h2>
-                      <p>
-                        What is biology studied for? What is synthetic biology?<br>
-                        Our team found that the public was not familiar with the new concept of synthetic biology, and had not even 
-                        heard of it. This made our iGEM team feel ashamed, so we came up with the idea of popularizing synthetic biology 
-                        knowledge to the public. <br>
-                        In order to showcase and introduce biology, more precisely synthetic biology, to the public, our team conducted 
-                        a 6-day summer teaching activity in Xinhu Village, Datan Office, Changjiang New District, Wuhan City, Hubei 
-                        Province from July 20 to July 25, 2024, hoping to enhance everyone's understanding and interest in the new 
-                        field of synthetic biology. <br>
-                      </p>
-                      <div class="photo-box">
-                        <img src="/static/picture/education22.png" alt="">
-                        <img src="/static/picture/education23.png" alt="">
-                      </div>
-                      <p>
-                        How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
-                        students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
-                        fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
-                        moment. <br>
-                      </p>
-                      <div class="photo-box" style="height: 300px;">
-                        <img src="/static/picture/education24.png" alt="">
-                      </div>
-                      <div class="photo-box" style="height: 400px;">
-                        <img src="/static/picture/education25.png" alt="">
-                      </div>
-                      
-
-
-                      <p>
-                        We brought tools for making glass slides and microscopes for observing glass slides. At the same time, we collected 
-                        lotus leaves and rice leaves locally and took children to use dissection tools to make temporary glass slides. We 
-                        carefully ensure that children use the dissecting knife safely and use tweezers to place the cut material on the cover 
-                        glass. The children actively participated in this course, demonstrating admirable learning, observation, and hands-on 
-                        abilities. "We didn't know before that life is so magical. Under the microscope, I saw such a wonderful world of cells, 
-                        and through this course, my hands-on abilities were greatly exercised <br>
-                      </p>
-
-                    <h2 id="section4">Lectures</h2>
-                      <div class="photo-box" style="">
-                        <img src="/static/picture/education26.png" alt="">
-                        <img src="/static/picture/education27.png" alt="">
-                      </div>
-                      <p>
-                        We found through survey questionnaires and public opinion analysis that the panic of the Chinese people towards rice 
-                        related technologies has been excessively intensified. They reject almost all technologies except for hybrid breeding 
-                        technology, and even have a passionate attitude towards practitioners. This is mainly due to the lack of life science 
-                        knowledge and erroneous popularization among ordinary people. In order to improve the public's unscientific cognition 
-                        and alleviate their panic, we held special lectures in communities, high schools, university campuses, and accounting 
-                        offices, explaining the development of rice breeding technology and the current application of synthetic biology 
-                        technology in rice breeding to community residents, high school students, environmental engineering majors, and accountants. 
-                        Through illustrations and storytelling, we explained in detail the process of human nutrient intake to metabolism, hoping 
-                        to help them understand and distinguish the differences between modern breeding technologies. We also explained to them 
-                        the fundamental reasons for the safety controversy surrounding genetically modified technology and the reasons why national 
-                        laws prohibit its promotion, hoping to help them identify the essential differences between genetically modified technology 
-                        and other modern breeding technologies, and change their current unscientific perception of "non hybridization is genetically 
-                        modified".
-                      </p>
-                      <div class="photo-box" style="">
-                        <img src="/static/picture/education28.png" alt="">
-                        <img src="/static/picture/education29.png" alt="">
-                      </div>
-                      <p>
-                        At the same time, we noticed that our target audience included children who had not yet learned about biology. Therefore, 
-                        we conducted simple experiments during the lecture to stimulate their curiosity about biology by reducing the color reaction 
-                        between sugar and Fehling reagent, protein and biuret reagent.
-                      </p>
-
-
-                        
-                </div>  
+      <div class="header-container" id="head">
+          <div class="header-title">
+              <h1>Education</h1>
+          </div>
+      </div>
+    
+      <hr class="partition-line">
+    
+      <div class="content-container">
+    
+        <div class="sidebar">  
+          <ul>  
+            <li><a href="#section1">Science popularization month of synthetic biology</a></li>  
+            <li><a href="#1.1">The Background</a></li>
+            <li><a href="#1.2">Parties and media</a></li>
+            <li><a href="#1.3">Event preparation</a></li>
+            <li><a href="#1.4">Activity content and form</a></li>
+            <li><a href="#1.5">popularization lecture</a></li>
+            <li><a href="#1.6">visit the laboratory</a></li>
+            <li><a href="#1.7">workshop experience</a></li>
+            <li><a href="#1.8">Purpose</a></li>
+            <li><a href="#1.9">Children's day science park party</a></li>
+            <li><a href="#1.91">Participants and teamwork</a></li>
+            <li><a href="#1.92">Activity effectiveness and reflection</a></li>
+    
+            <li><a href="#section2">Speech Contest</a></li>  
+            <li><a href="#section3">Volunteer Teaching</a></li> 
+            <li><a href="#section4">Lectures</a></li> 
+          </ul>  
+        </div> 
+    
+        <div class="main-text">  
+          <div class="text-item">  
+    
+            <h2 id="section1">Science popularization month of synthetic biology</h2> 
+              <h3 id="1.1">The Background</h3>
+              <p>In the course of the survey, we found that at present, the Chinese people still have great misunderstandings
+                  about synthetic biology technology, and science popularization activities need to be more interesting and 
+                  diversified. In order to popularize the knowledge of synthetic biology, improve the public's interest and 
+                  cognition of life science, and promote the wide application of synthetic biology technology in society, our
+                  team planned and organized the general month of synthetic biology.
+                <br>
+              </p>
+              <h3 id="1.2">Parties and media</h3>
+              <p>
+                In order to solve the problem of activity funds and promotion degree, we sought the support of funds or activity 
+                platforms from the Chinese society of cell biology, Hubei society of cell biology, Hubei provincial science 
+                popularization education base, College of life sciences, Hubei University, the State Key Laboratory of 
+                biocatalysis and Enzyme Engineering jointly built by the Province and the Ministry, the national experimental 
+                teaching demonstration center of chemical and biological engineering technology of Hubei University, and the 
+                Committee of the Art College of Hubei University of the Communist Youth League.
+                <br>
+                In the middle of the event, we published the personal blog of the event on 
+                <a href="http://h5.jp.cjn.cn/#/h5/news?informationId=3978908&sourceType=0&type=android&isDetail=0">Changjiang online</a>
+                ,which was widely praised by netizens. The editorial department of Changjiang Daily immediately began to close our event 
+                and carried out media promotion for us.
+                <br>
+                After the event, the official wechat official account <a href="https://mp.weixin.qq.com/s/XJUPsEvEXwGu3zgAbBCxtQ">"cell world"</a>
+                of the Chinese Society for cell biology also released 
+                the event tweet, expressing its affirmation of the effectiveness of our event.
+              </p>
+              <h3 id="1.3">Event preparation</h3>
+              <p>
+                We invited the iGEM teams hubuloong CHN, China Hubu Wuhan, tjusls China and CUG China to jointly organize the activities. 
+                They brought their laboratory research and iGEM projects to the activities, which broadened the science popularization 
+                field of the activities.
+              </p>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education1.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education2.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education3.png" alt="">
+              </div>
+              <h3 id="1.4">Activity content and form</h3>
+              <p>The event took the form of a carnival and lasted about one month, including online training, laboratory open day, biological art creative competition, children's day science park.
+                Online training on May 8 and May 10, 20:30-22:30
+                Audience - all the people who will enter the laboratory and the students of the art school of Hubei University who have signed up for the biological art creative competition
+              </p>
+              <div class="photo-box" style="height: 200px;">
+                <img src="https://static.igem.wiki/teams/5167/education4.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education5.png" alt="">
+              </div>
+              <p style="text-align:right; font-size: 12px;">14:00-18:00 on May 18 laboratory open day</p>
+              <h4 id='1.5'>Part 1- multimedia classroom science popularization lecture</h4>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education6.png" alt="">
+              </div>
+    
+              <h4 id="1.6">Part II visit the laboratory</h4>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education7.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education8.png" alt="">
+              </div>
+              <p>
+                The members of each team introduced the instruments in the laboratory and their use methods and principles to the visitors, and demonstrated the use of simple instruments such as pipette guns.
+              </p>
+    
+              <h4 id="1.7">Part III workshop experience</h4>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education9.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education10.png" alt="">
+              </div>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education11.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education12.png" alt="">
+              </div>
+              <p style="text-align: right; font-size: 12px;">From May 18 to May 24, solicit contributions for the biological art creative competition</p>
+              <p>Experience project
+                Making butterfly specimens
+                Observe the permanent loading of microorganisms
+                Observation of plant tissue sections Yongjie mounting
+                Paramecium temporary fashion films were made, and their movements were observed with a dark field microscope
+                The brown algae were temporarily mounted, and its cytoplasmic circulation was observed with a phase contrast microscope, and its autofluorescence was observed with a fluorescence microscope
+                During the experience, the experimental group members of each team will teach and operate.
+              </p>
+              <h4 id="1.8">Purpose</h4>
+              <p>
+                1. We hope to guide college students majoring in art to interpret their attitude towards synthetic biology changing the world from their professional teaching and reading. We have held the competition as a "campus version of iGEM for cross-border art". We hope that the contestants can think with us about the current or potential survival problems faced by human beings in the world and how we can make our contributions from the perspective of synthetic biology. <br>
+                2. We set up the track according to iGEM village, and asked the contestants to reflect their solutions or reflections in their works. We know that for them, it is likely to be more difficult to give a scientific and feasible solution, but this is what we hope they can be guided to do. In order to encourage them, we have been in close contact with them. We answer any questions on the basic knowledge of synthetic biology for them, and we have set the evaluation standard that gives solutions will score higher than reflection (jump to the next part of the scoring standard). We hope to find art majors who are interested in biological art in the competition. If they can further study in the field of biological art and further exchange and study with synthetic biology in the future, we believe that our competition is a real success. <br>
+                3. We set the competition after the open day and hope that all contestants can take the competition as the practice of science popularization harvest on the laboratory open day, help them understand and master scientific knowledge, apply what they have learned to creation, and cultivate rigorous scientific spirit.
+              </p>
+              <br>
+              <p>From May 24 to May 28, six teachers from the College of life sciences and the College of Arts of Hubei University reviewed the works (insert the selected works and the corresponding theme introduction of the works) <br>
+                This is a serious interdisciplinary exchange, not a children's play. At the same time, we hope that the teachers of the two colleges can also experience the charm of biological art in the work review.
+              </p>
+              <p>
+                Scoring criteria——comprehensive score =25% × scientific score +25% × speculative score +25% × artistic score +25% × creative score <br>
+                Scientificity—— the theme of the work conforms to the biological principle. Theoretically, in the future, the bioethical living works of biological art can be made by modifying organisms according to the design <br>
+                Speculative—— the depth of the author's solutions to or reflections on the current or potential survival problems facing mankind around the world. In this dimension, the works that propose solutions need to score 30% higher than the works that propose reflections
+                Artistry——color, meaning discussion, open thinking <br>
+                Creativity—— the creativity and independence of the author's thinking embodied in the work <br>
+              </p>
+              <div class="photo-box" style="height: 400px;">
+                <img src="https://static.igem.wiki/teams/5167/education13.png" alt="">
+              </div>
               
+    
+              <h3 id="1.9">Children's day science park party on June 1</h3>
+              <p>
+                Children's day science park party on June 1
+                Audience: community residents, parent-child groups, retired teachers of College of life sciences, Hubei University <br>
+                Biological art creative exhibition area: Works Exhibition, herbarium exhibition, interactive games<br>
+                Popular science exhibition area: iGEM team project and Challenge Cup project interactive exhibition area, herbarium exhibition, interactive games<br>
+                The plant specimens were provided by the 2022 students from the College of life sciences of Hubei University who went to Lushan scenic spot in Jiangxi Province for field practice
+                Interactive game project<br>
+                Virus, DNA super light clay model manual teaching<br>
+                Base complementary pairing ferrule<br>
+                Text text pairing of terms in synthetic biology<br>
+                Reading biology popular science articles<br>
+                Biology you draw I guess<br>
+    
+              </p>
+              <div class="photo-box" style="height: 200px;">
+                <img src="https://static.igem.wiki/teams/5167/education14.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education15.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education16.png" alt="">
+              </div>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education17.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education18.png" alt="">
+              </div>
+    
+              <h3 id="1.91">Participants and teamwork</h3>
+    
+              <p>
+                This event attracted primary and secondary school students, parents, college students, 
+                graduate students, educators, science and technology lovers, etc. At the same time, we have also received the support
+                and help of many cooperation units, including schools, social academic groups, media, etc. In the process of the event,
+                the volunteer team played an important role. They were responsible for reception, navigation and other work, and 
+                provided warm and thoughtful services to the tourists participating in the event. The team members worked closely 
+                together to complete the task of the event and played a good role in educating all kinds of audiences of the event.
+              </p>
+    
+              <h3 id="1.92">Activity effectiveness and reflection</h3>
+              <p>
+                We collected feedback from the event audience through questionnaires and random interviews at the event site, 
+                and we are sincerely happy that they have gained something from the event. There is a little boy wearing blue 
+                clothes who has been unwilling to leave our team's booth. From being inspired by interactive games to constantly 
+                asking about the technology used in our project, our team's resident member Jia Zhixin vividly introduced and 
+                answered for him. When he left, he was also excited to share his gains with his parents. (Insert pie chart of 
+                questionnaire statistics results and on-site interview video)<be>
+                After the activity, our experimental team and art team members also went to visit the graduation exhibition of 
+                the Experimental Art School of Hubei Academy of Fine Arts, and in August, we went to Shenzhen to participate in 
+                the bio art forum and lectures jointly held by the Chinese Academy of Sciences Shenzhen Advanced Research Institute 
+                and the Central Academy of Fine Arts, and visited the exhibition to discuss and reflect on the application and 
+                development prospects of synthetic biology in the field of bio art. Due to limited planning time and equipment, 
+                we regret that we were unable to provide participants with the opportunity to use and modify living organisms for 
+                creative purposes in this event. According to the "Biological Art Manifesto", we plan to hold another campus 
+                biological art competition next year. At that time, we will provide experimental space for participants and invite 
+                students from the School of Life Sciences to collaborate with them to develop experimental plans, helping them 
+                create truly meaningful biological art works!<br>                        
+              </p>
+    
+            <h2 id="section2">Speech Contest</h2>
+              <p>
+                In China, speech competitions with party and government themes are popular ideological education activities 
+                among Chinese teachers and students on university campuses, regardless of the major or college. We have found 
+                that we can take advantage of this opportunity to introduce our project and plant synthetic biology to non 
+                biological teachers and students. In terms of speech format, we will take China's food security as the starting 
+                point.   In the speech, we talked to the audience about the development of rice breeding technology and the 
+                research process of polyploid rice, and introduced our project to the audience. At the end of our speech, we 
+                call on more college students and young people to actively engage in the fields of synthetic biology and 
+                agriculture, in order to promote the development of agriculture and society.
+              </p>
+              <div class="photo-box" style="height: 500px;" >
+                <img src="https://static.igem.wiki/teams/5167/education19.png" alt="">
+              </div>
+              <div class="photo-box" style="height: 210px;">
+                <img src="https://static.igem.wiki/teams/5167/education20.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education21.png" alt="">
+              </div>
+            <h2 id="section3">Volunteer Teaching</h2>
+              <p>
+                What is biology studied for? What is synthetic biology?<br>
+                Our team found that the public was not familiar with the new concept of synthetic biology, and had not even 
+                heard of it. This made our iGEM team feel ashamed, so we came up with the idea of popularizing synthetic biology 
+                knowledge to the public. <br>
+                In order to showcase and introduce biology, more precisely synthetic biology, to the public, our team conducted 
+                a 6-day summer teaching activity in Xinhu Village, Datan Office, Changjiang New District, Wuhan City, Hubei 
+                Province from July 20 to July 25, 2024, hoping to enhance everyone's understanding and interest in the new 
+                field of synthetic biology. <br>
+              </p>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education22.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education23.png" alt="">
+              </div>
+              <p>
+                How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
+                students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
+                fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
+                moment. <br>
+              </p>
+              <div class="photo-box" style="height: 300px;">
+                <img src="https://static.igem.wiki/teams/5167/education24.png" alt="">
+              </div>
+              <div class="photo-box" style="height: 400px;">
+                <img src="https://static.igem.wiki/teams/5167/education25.png" alt="">
+              </div>
               
-                <a href="#head" class="to-top">返回顶部</a>  
-            </div>  
-        </div>
+    
+    
+              <p>
+                We brought tools for making glass slides and microscopes for observing glass slides. At the same time, we collected 
+                lotus leaves and rice leaves locally and took children to use dissection tools to make temporary glass slides. We 
+                carefully ensure that children use the dissecting knife safely and use tweezers to place the cut material on the cover 
+                glass. The children actively participated in this course, demonstrating admirable learning, observation, and hands-on 
+                abilities. "We didn't know before that life is so magical. Under the microscope, I saw such a wonderful world of cells, 
+                and through this course, my hands-on abilities were greatly exercised <br>
+              </p>
+    
+            <h2 id="section4">Lectures</h2>
+              <div class="photo-box" >
+                <img src="https://static.igem.wiki/teams/5167/education26.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education27.png" alt="">
+              </div>
+              <p>
+                We found through survey questionnaires and public opinion analysis that the panic of the Chinese people towards rice 
+                related technologies has been excessively intensified. They reject almost all technologies except for hybrid breeding 
+                technology, and even have a passionate attitude towards practitioners. This is mainly due to the lack of life science 
+                knowledge and erroneous popularization among ordinary people. In order to improve the public's unscientific cognition 
+                and alleviate their panic, we held special lectures in communities, high schools, university campuses, and accounting 
+                offices, explaining the development of rice breeding technology and the current application of synthetic biology 
+                technology in rice breeding to community residents, high school students, environmental engineering majors, and accountants. 
+                Through illustrations and storytelling, we explained in detail the process of human nutrient intake to metabolism, hoping 
+                to help them understand and distinguish the differences between modern breeding technologies. We also explained to them 
+                the fundamental reasons for the safety controversy surrounding genetically modified technology and the reasons why national 
+                laws prohibit its promotion, hoping to help them identify the essential differences between genetically modified technology 
+                and other modern breeding technologies, and change their current unscientific perception of "non hybridization is genetically 
+                modified".
+              </p>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education28.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education29.png" alt="">
+              </div>
+              <p>
+                At the same time, we noticed that our target audience included children who had not yet learned about biology. Therefore, 
+                we conducted simple experiments during the lecture to stimulate their curiosity about biology by reducing the color reaction 
+                between sugar and Fehling reagent, protein and biuret reagent.
+              </p>
+    
+    
+    
+    
+    
+    
+                    
+          </div>  
+          
+          
+          <a href="#head" class="to-top">返回顶部</a>  
+          <hr class="end-line" style="width: 80%; align-items: center;">
 
+          <p>
+            How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
+            students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
+            fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
+            moment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi mollitia maxime, minus dignissimos 
+            hic exercitationem ut soluta ipsam veritatis sequi quod temporibus eaque itaque optio vitae accusantium? Quas,
+            voluptas! <br>
+        </div>
+    
+      </div>
+    
     </div>
+  </div>
+
   
 
   
 </body>  
 </html>
 <script>
+//文章页面侧边栏固定
 function makeElementSticky(elementClass) {
   var element = document.querySelector(elementClass);
-  if (!element) return; 
+  if (!element) return;
 
-  var offsetTop = element.offsetTop; 
+  var offsetTop = element.offsetTop;
 
   window.addEventListener('scroll', function() {
-    if (window.pageYOffset > offsetTop) {
+
+    var mainText = document.querySelector('.main-text');
+    var totop = document.querySelector('.to-top');
+    var endLineElement = document.querySelector('.end-line');
+    var headcontainer = document.querySelector('.header-container');
+
+    var headhigh = headcontainer.offsetHeight;
+    var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+
+    // 检查是否滚动超过元素顶部并添加固定类
+    if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
       element.classList.add('fixed');
+      mainText.classList.add('fixed');
+      totop.classList.add('show');
     } else {
       element.classList.remove('fixed');
+      mainText.classList.remove('fixed');
+      totop.classList.remove('show');
+
+    if (window.pageYOffset > endsetTop) {
+      element.classList.add('down');
+      element.style.top = (endsetTop - headhigh) + 'px';
+    } else {
+      element.classList.remove('down');
+      element.style.top = 0 + 'px';
+    }
     }
   });
 }
 
 // 当DOM内容完全加载后
 document.addEventListener("DOMContentLoaded", function() {
-  // 为sidebar和main-text元素添加滚动监听
+  // 为sidebar添加滚动监听
   makeElementSticky('.sidebar');
-  makeElementSticky('.main-text');
+});
+
+// 当DOM内容完全加载后
+document.addEventListener("DOMContentLoaded", function() {
+  // 为sidebar添加滚动监听
+  makeElementSticky('.sidebar');
 });
   </script> 
   
