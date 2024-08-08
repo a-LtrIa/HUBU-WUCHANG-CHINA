@@ -81,7 +81,7 @@
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   border-radius: 10px;
   overflow-y: auto; 
-  transition: top 0.3s; /* 平滑过渡 */
+  transition: top 0.3s;
 }
 
 
@@ -105,7 +105,6 @@
 .main-text {
   margin-top: 0px;
   width: 80%;
-  /* margin-left: 20%; */
 }
 
 .main-text h2{
@@ -473,55 +472,50 @@ margin-left: 20px;
 </body>  
 </html>
 <script>
-//文章页面侧边栏固定
-function makeElementSticky(elementClass) {
-  var element = document.querySelector(elementClass);
-  if (!element) return;
+  //文章页面侧边栏固定
+  function makeElementSticky(elementClass) {
+    var element = document.querySelector(elementClass);
+    if (!element) return;
 
-  var offsetTop = element.offsetTop;
+    var offsetTop = element.offsetTop;
 
-  window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
+      var mainText = document.querySelector('.main-text');
+      var totop = document.querySelector('.to-top');
+      var endLineElement = document.querySelector('.end-line');
+      var headcontainer = document.querySelector('.header-container');
 
-    var mainText = document.querySelector('.main-text');
-    var totop = document.querySelector('.to-top');
-    var endLineElement = document.querySelector('.end-line');
-    var headcontainer = document.querySelector('.header-container');
+      var headhigh = headcontainer.offsetHeight;
+      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
 
-    var headhigh = headcontainer.offsetHeight;
-    var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+      element.style.top = '';
 
-    // 检查是否滚动超过元素顶部并添加固定类
-    if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
-      element.classList.add('fixed');
-      mainText.classList.add('fixed');
-      totop.classList.add('show');
-    } else {
-      element.classList.remove('fixed');
-      mainText.classList.remove('fixed');
-      totop.classList.remove('show');
+      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
+        element.classList.add('fixed');
+        mainText.classList.add('fixed');
+        totop.classList.add('show');
+        element.classList.remove('down');
 
-    if (window.pageYOffset > endsetTop) {
-      element.classList.add('down');
-      element.style.top = (endsetTop - headhigh) + 'px';
-    } else {
-      element.classList.remove('down');
-      element.style.top = 0 + 'px';
-    }
-    }
+      } else if (window.pageYOffset > endsetTop) {
+        element.classList.remove('fixed'); 
+        element.classList.add('down');
+        element.style.top = (endsetTop - headhigh - 40) + 'px';
+        mainText.classList.remove('fixed');
+        totop.classList.remove('show'); 
+      } else {
+        element.classList.remove('fixed');
+        element.classList.remove('down');
+        element.style.top = '';
+        totop.classList.remove('show');
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    makeElementSticky('.sidebar');
   });
-}
 
-// 当DOM内容完全加载后
-document.addEventListener("DOMContentLoaded", function() {
-  // 为sidebar添加滚动监听
-  makeElementSticky('.sidebar');
-});
 
-// 当DOM内容完全加载后
-document.addEventListener("DOMContentLoaded", function() {
-  // 为sidebar添加滚动监听
-  makeElementSticky('.sidebar');
-});
   </script> 
   
 
