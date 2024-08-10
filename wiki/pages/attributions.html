@@ -1,53 +1,432 @@
-{% extends "layout.html" %}
 
-{% block title %}Attributions{% endblock %}
-{% block lead %}In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.{% endblock %}
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Education</title>  
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-{% block page_content %}
+.header-container{
+  position: relative;  
+  height: 100vh; /* 使用视口高度单位，确保全屏 */  
+  width: 100%;
+  background-image: url('/static/picture/head-example.png') ;
+  background-repeat: no-repeat;  
+  background-size: cover;  
+  background-position: center;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center; 
+  margin-bottom: 20px;
+}
 
-<div class="row mt-4">
-  <div class="col">
-    <div>
-      <p>Teams must use the standard Attributions form. To meet the attributions requirement, you must display the standard form on your Wiki by following the instructions here: <a href="https://competition.igem.org/deliverables/project-attribution">Project Attribution page</a>.    </p>
-    </div>
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #2</h4>
-      <p>Describe what work your team members did and what other people did for your project.</p>
-      <p>The form that has been embedded in an iframe in this page shows your team's Project Attribution form. This page must keep the form as it is.</p>
-      <p>If you use a different website framework, make sure to embed the right URL for your team's form.</p>
+.header-title h1{
+  text-align: center;  
+  color: #fff; 
+  font-size: 50px;
+}
+
+.partition-line{
+  width: 1200px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto ;
+}
+
+.sidebar {
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
+}
+
+.sidebar.fixed {
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+}
+
+
+.main-text.fixed{
+  margin-top: 0px;
+  width: 80%;
+  margin-left: 20%;
+}
+
+.main-text.down{
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a:hover {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.main-text {
+  margin-top: 0px;
+  width: 80%;
+}
+
+.main-text h2{
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.text-item{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-item p {
+  margin-top: 0;
+  text-indent: 2em; 
+}
+.photo-box{
+display: flex;
+height: 300px;
+justify-content: center;
+width: 100%;
+margin-top: 10px;
+}
+
+.photo-box img{
+margin-left: 20px;
+}
+
+.to-top {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+    
+</style>
+
+</head>  
+<body>  
+  <div>
+    <div class="text-container">
+      <div class="header-container" id="head">
+          <div class="header-title">
+              <h1>Education</h1>
+          </div>
+      </div>
+    
+      <hr class="partition-line">
+    
+      <div class="content-container">
+    
+        <div class="sidebar">  
+          <ul>  
+            <li><a href="#section1"></a></li>  
+            <li><a href="#1.1"></a></li>
+            <li><a href="#1.2"></a></li>
+            <li><a href="#1.3"></a></li>
+            <li><a href="#1.4"></a></li>
+            <li><a href="#1.5"></a></li>
+            <li><a href="#1.6"></a></li>
+            <li><a href="#1.7"></a></li>
+            <li><a href="#1.8"></a></li>
+            <li><a href="#1.9"></a></li>
+            <li><a href="#1.91"></a></li>
+            <li><a href="#1.92"></a></li>
+    
+            <li><a href="#section2"></a></li>  
+            <li><a href="#section3"></a></li> 
+            <li><a href="#section4"></a></li> 
+          </ul>  
+        </div> 
+    
+        <div class="main-text">  
+          <div class="text-item">  
+    
+            <h2 id="section1"></h2> 
+              <h3 id="1.1"></h3>
+              <p>
+               
+
+                <br>
+              </p>
+              <h3 id="1.2"></h3>
+              <p>
+
+              
+              </p>
+              <h3 id="1.3"></h3>
+              <p>
+               
+              </p>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education1.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education2.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education3.png" alt="">
+              </div>
+              <h3 id="1.4"></h3>
+              <p>
+                
+                
+              </p>
+              <div class="photo-box" style="height: 200px;">
+                <img src="https://static.igem.wiki/teams/5167/education4.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education5.png" alt="">
+              </div>
+              <p style="text-align:right; font-size: 12px;"></p>
+              <h4 id='1.5'></h4>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education6.png" alt="">
+              </div>
+    
+              <h4 id="1.6">Part II visit the laboratory</h4>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education7.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education8.png" alt="">
+              </div>
+              <p>
+
+              </p>
+    
+              <h4 id="1.7">Part III workshop experience</h4>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education9.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education10.png" alt="">
+              </div>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education11.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education12.png" alt="">
+              </div>
+              <p style="text-align: right; font-size: 12px;"></p>
+              <p>
+
+              </p>
+              <h4 id="1.8">Purpose</h4>
+              <p>
+                
+              <br>
+              <p>
+
+              </p>
+              <p>
+
+              </p>
+              <div class="photo-box" style="height: 400px;">
+                <img src="https://static.igem.wiki/teams/5167/education13.png" alt="">
+              </div>
+              
+    
+              <h3 id="1.9">Children's day science park party on June 1</h3>
+              <p>
+
+    
+              </p>
+              <div class="photo-box" style="height: 200px;">
+                <img src="https://static.igem.wiki/teams/5167/education14.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education15.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education16.png" alt="">
+              </div>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education17.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education18.png" alt="">
+              </div>
+    
+              <h3 id="1.91">Participants and teamwork</h3>
+    
+              <p>
+            
+              </p>
+    
+              <h3 id="1.92"></h3>
+              <p>
+                      
+              </p>
+    
+            <h2 id="section2"></h2>
+              <p>
+
+              </p>
+              <div class="photo-box" style="height: 500px;" >
+                <img src="https://static.igem.wiki/teams/5167/education19.png" alt="">
+              </div>
+              <div class="photo-box" style="height: 210px;">
+                <img src="https://static.igem.wiki/teams/5167/education20.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education21.png" alt="">
+              </div>
+            <h2 id="section3">Volunteer Teaching</h2>
+              <p>
+
+              </p>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education22.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education23.png" alt="">
+              </div>
+              <p>
+ <br>
+              </p>
+              <div class="photo-box" style="height: 300px;">
+                <img src="https://static.igem.wiki/teams/5167/education24.png" alt="">
+              </div>
+              <div class="photo-box" style="height: 400px;">
+                <img src="https://static.igem.wiki/teams/5167/education25.png" alt="">
+              </div>
+              
+    
+    
+              <p>
+              
+                <br>
+              </p>
+    
+            <h2 id="section4">Lectures</h2>
+              <div class="photo-box" >
+                <img src="https://static.igem.wiki/teams/5167/education26.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education27.png" alt="">
+              </div>
+              <p>
+
+              </p>
+              <div class="photo-box">
+                <img src="https://static.igem.wiki/teams/5167/education28.png" alt="">
+                <img src="https://static.igem.wiki/teams/5167/education29.png" alt="">
+              </div>
+              <p>
+
+              </p>
+    
+    
+    
+    
+    
+    
+                    
+          </div>  
+          
+          
+          <a href="#head" class="to-top">back to top</a>  
+          <hr class="end-line" style="width: 80%; align-items: center;">
+
+          <p>
+            How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
+            students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
+            fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
+            moment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi mollitia maxime, minus dignissimos 
+            hic exercitationem ut soluta ipsam veritatis sequi quod temporibus eaque itaque optio vitae accusantium? Quas,
+            voluptas! <br>
+        </div>
+    
+      </div>
+    
     </div>
   </div>
-</div>
 
-<!--
-  ======================================================================
-  == VERY IMPORTANT                                                   ==
-  ======================================================================
-  LEAVE THE IFRAME CODE BELOW AS IT IS, THE ATTRIBUTION FORM OF YOUR TEAM
-  WILL BE DISPLAYED ON THIS PAGE. DO NOT REMOVE IT, OTHERWISE YOU RISK OF
-  NOT MEETING BRONZE MEDAL CRITERION #2
- -->
-<div class="row mt-4">
-  <script type="text/javascript">
-    // Listen to size change and update form height
-    window.addEventListener("message", function (e) {
-      if (e.origin === "https://teams.igem.org") {
-        const {type, data} = JSON.parse(e.data);
-        if (type === "igem-attribution-form") {
-          const element = document.getElementById("igem-attribution-form");
-          element.style.height = `${data + 100}px`;
-        }
+  
+
+  
+</body>  
+</html>
+<script>
+  //文章页面侧边栏固定
+  function makeElementSticky(elementClass) {
+    var element = document.querySelector(elementClass);
+    if (!element) return;
+
+    var offsetTop = element.offsetTop;
+
+    window.addEventListener('scroll', function() {
+      var mainText = document.querySelector('.main-text');
+      var totop = document.querySelector('.to-top');
+      var endLineElement = document.querySelector('.end-line');
+      var headcontainer = document.querySelector('.header-container');
+
+      var headhigh = headcontainer.offsetHeight;
+      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+
+      element.style.top = '';
+
+      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
+        element.classList.add('fixed');
+        mainText.classList.add('fixed');
+        totop.classList.add('show');
+        element.classList.remove('down');
+
+      } else if (window.pageYOffset > endsetTop) {
+        element.classList.remove('fixed'); 
+        element.classList.add('down');
+        element.style.top = (endsetTop - headhigh - 40) + 'px';
+        mainText.classList.remove('fixed');
+        totop.classList.remove('show'); 
+      } else {
+        element.classList.remove('fixed');
+        element.classList.remove('down');
+        mainText.classList.remove('fixed')
+        element.style.top = '';
+        totop.classList.remove('show');
       }
     });
-  </script>
-  <iframe
-    style='width: 100%'
-    id="igem-attribution-form"
-    src="https://teams.igem.org/wiki/5167/attributions">
-  >
-  </iframe>
-  <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+  }
 
-</div>
+  document.addEventListener("DOMContentLoaded", function() {
+    makeElementSticky('.sidebar');
+  });
 
+
+  </script> 
+  
+
+
+{% extends "layout.html" %}
+{% block page_content %}
 {% endblock %}

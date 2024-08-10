@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Describtion</title>  
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container{
+  position: relative;  
+  height: 100vh; /* 使用视口高度单位，确保全屏 */  
+  width: 100%;
+  background-image: url('/static/picture/head-example.png') ;
+  background-repeat: no-repeat;  
+  background-size: cover;  
+  background-position: center;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.header-title h1{
+  text-align: center;  
+  color: #fff; 
+  font-size: 50px;
+}
+
+.partition-line{
+  width: 1200px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto ;
+}
+
+.sidebar {
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
+}
+
+.sidebar.fixed {
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+}
+
+
+.main-text.fixed{
+  margin-top: 0px;
+  width: 80%;
+  margin-left: 20%;
+}
+
+.main-text.down{
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a:hover {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.main-text {
+  margin-top: 0px;
+  width: 80%;
+}
+
+.main-text h2{
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.text-item{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-item p {
+  margin-top: 0;
+  text-indent: 2em; 
+}
+.photo-box{
+display: flex;
+height: 300px;
+justify-content: center;
+width: 100%;
+margin-top: 10px;
+}
+
+.photo-box img{
+margin-left: 20px;
+}
+
+.to-top {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+    
+</style>
+
+</head>  
+<body>  
+    <div>
+        <div class="text-container">
+        <div class="header-container" id="head">
+            <div class="header-title">
+                <h1>Describtion</h1>
+            </div>
+        </div>
+        
+        <hr class="partition-line">
+        
+        <div class="content-container">
+        
+            <div class="sidebar">  
+            <ul>  
+                <li><a href="#section1">Why we want to do that</a></li>  
+                <li><a href="#section2">What we have done</a></li>  
+                <li><a href="#section3">We are going to do</a></li> 
+            </ul>  
+            </div> 
+        
+            <div class="main-text">  
+            <div class="text-item">  
+        
+                <h2 id="section1">Why we want to do that</h2> 
+                <p>
+                    Lysine is involved in protein synthesis and the β-oxidation of fatty acid.
+                    Lysine insufficiency will affect the composition and utilization of amino acids. 
+                    As rice is the staple food of 3.5 billion people in the world, increasing the protein
+                    and lysine content of rice is of great significance to underdeveloped animal-husbandry
+                    countries and regions with rice as staple food.<br>
+                    Allergic diseases are the key diseases that need prevention and treatment in the 21st century.
+                    Research shows that more than 10% of people in Japan have different degrees of allergic
+                    reactions to rice, and the data is up to 30% in Malaysia. Therefore, food allergy is a food safety
+                    problem that needs attention for high protein food.
+                </p>
+                <h2 id="section2">What we have done</h2>
+                <p>
+                    We polyploidized diploid rice into tetraploid by colchicine treatment, 
+                    and used CRISPR/Cas9  gene editing technology to site edit the gluten and globulin genes of tetraploid rice,
+                    screened and evaluated the quality of mutants. Finally, we selected the digenic mutant of globulin and gluten genes, 
+                    because it met our expectations of improving the nutritional quality of rice and food safety.<br>
+                </p>
+                <h2 id="section3">We are going to do</h2>
+                <p>
+                    In terms of ihuman practice, we randomly invite rice vendors and consumers do questionnaire and ask to understand
+                    the consumer consumption habits and market demand, and through the statistical electric business platform in rice nutrition data
+                found the current Chinese rice widespread low protein content, and Chinese consumers generally do not pay attention to the nutritional
+                value of rice. In the process of perfecting the experiment, we also consulted the nutrition experts. In the summer vacation, we will
+                go to agricultural products and seed companies, Academy of Agricultural Sciences, Grain Bureau, Department of Agriculture and other
+                institutions and units for investigation, and further consult experts and scholars in the rice industry to help us optimize our
+                projects. On the other hand, we had in-depth exchanges with the governor, the mayor, the agricultural enterprises, the policy
+                consultants, the staff of the academy, the consumers and other stakeholders. <br>
+                </p>
+                        
+            </div>  
+            
+            
+            <a href="#head" class="to-top">back to top</a>  
+            <hr class="end-line" style="width: 80%; align-items: center;">
+
+            <p>
+                How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
+                students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
+                fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
+                moment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi mollitia maxime, minus dignissimos 
+                hic exercitationem ut soluta ipsam veritatis sequi quod temporibus eaque itaque optio vitae accusantium? Quas,
+                voluptas! <br>
+            </div>
+        
+        </div>
+        
+        </div>
+    </div>
+
+  
+
+  
+</body>  
+</html>
+<script>
+  //文章页面侧边栏固定
+  function makeElementSticky(elementClass) {
+    var element = document.querySelector(elementClass);
+    if (!element) return;
+
+    var offsetTop = element.offsetTop;
+
+    window.addEventListener('scroll', function() {
+      var mainText = document.querySelector('.main-text');
+      var totop = document.querySelector('.to-top');
+      var endLineElement = document.querySelector('.end-line');
+      var headcontainer = document.querySelector('.header-container');
+
+      var headhigh = headcontainer.offsetHeight;
+      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+
+      element.style.top = '';
+
+      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
+        element.classList.add('fixed');
+        mainText.classList.add('fixed');
+        totop.classList.add('show');
+        element.classList.remove('down');
+
+      } else if (window.pageYOffset > endsetTop) {
+        element.classList.remove('fixed'); 
+        element.classList.add('down');
+        element.style.top = (endsetTop - headhigh - 40) + 'px';
+        mainText.classList.remove('fixed');
+        totop.classList.remove('show'); 
+      } else {
+        element.classList.remove('fixed');
+        element.classList.remove('down');
+        mainText.classList.remove('fixed')
+        element.style.top = '';
+        totop.classList.remove('show');
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    makeElementSticky('.sidebar');
+  });
+
+
+  </script> 
+  
+
+
+{% extends "layout.html" %}
+{% block page_content %}
+{% endblock %}
