@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Describtion</title>  
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container{
+  position: relative;  
+  height: 100vh; /* 使用视口高度单位，确保全屏 */  
+  width: 100%;
+  background-image: url('/static/picture/head-example.png') ;
+  background-repeat: no-repeat;  
+  background-size: cover;  
+  background-position: center;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.header-title h1{
+  text-align: center;  
+  color: #fff; 
+  font-size: 50px;
+}
+
+.partition-line{
+  width: 1200px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto ;
+}
+
+.sidebar {
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
+}
+
+.sidebar.fixed {
+  height: auto;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+}
+
+
+.main-text.fixed{
+  margin-top: 0px;
+  width: 80%;
+  margin-left: 20%;
+}
+
+.main-text.down{
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a:hover {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.main-text {
+  margin-top: 0px;
+  width: 80%;
+}
+
+.main-text h2{
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.text-item{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-item p {
+  margin-top: 0;
+  text-indent: 2em; 
+}
+.photo-box{
+display: flex;
+height: 300px;
+justify-content: center;
+width: 100%;
+margin-top: 10px;
+}
+
+.photo-box img{
+margin-left: 20px;
+}
+
+.to-top {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+
+    
+</style>
+
+</head>  
+<body>  
+    <div>
+        <div class="text-container">
+        <div class="header-container" id="head">
+            <div class="header-title">
+                <h1>Collaborations</h1>
+            </div>
+        </div>
+        
+        <hr class="partition-line">
+        
+        <div class="content-container">
+        
+            <div class="sidebar">  
+            <ul>  
+                <li><a href="#section1">Wuhan University Exchange Meeting</a></li>  
+                <li><a href="#section2">Congress of Synthetic Biology</a></li>  
+                <li><a href="#section3">National Academic Conference on Cell Biology</a></li> 
+                <li><a href="#section4">11th CciC</a></li> 
+            </ul>  
+            </div> 
+        
+            <div class="main-text">  
+            <div class="text-item">  
+        
+                <h2 id="section1">Wuhan University Exchange Meeting</h2> 
+                <p>
+                    At the invitation of the WHU-iGEM team of Wuhan University, we participated in the exchange conference in the field of synthetic biology hosted by the iGEM team of Wuhan University. At the meeting, we discussed the project design problems and actively sought solutions in a targeted manner. Through this conference, our understanding of synthetic biology has been further deepened, which has helped our team to gain new ideas and directions in the future exploration of synthetic biology. <br>
+                    This event is not only a vivid practice to deepen the education and research of synthetic biology, but also promotes the close integration and interaction between academia and industry between different universities. Our team members said that they benefited a lot from the exchange and felt the knowledge renewal and broadening of perspectives brought about by cross-school cooperation. 
+
+                </p>
+                <div class="photo-box" >
+                  <img src="https://static.igem.wiki/teams/5167/Collaborations1.png" alt="">
+                  <img src="https://static.igem.wiki/teams/5167/Collaborations2.png" alt="">                    
+                </div>
+                <h2 id="section2">Congress of Synthetic Biology</h2>
+                <p>
+                    The 2024 Synthetic Biology Open Conference University Roadshow (Hubei University Station) was held on April 27, 2024 in the Sirui Hall of the Conference Center of Hubei University, and was jointly organized by four iGEM teams from Hubei University, namely HUBU-WUCHANG-CHINA team, HUBU-CHINA TEAM, CHINA-HUBU-WUHAN team and HUBULOONG-CHN team. The Synthetic Biology Open Conference allowed us to learn about the policies of the Synthetic Biology Innovation Competition, and this exchange helped us to better understand and recognize the potential of synthetic biology, so that we can improve and refine our project design and implementation. <br>
+                    At the conference, we cooperated with iGEMers from various schools (Wuhan University, Huazhong University of Science and Technology, Hubei University of Technology, Wuhan University of Light Industry, etc.) to swim in the charm of synthetic biology. 
+                </p>
+
+                <h2 id="section3"></h2>
+                <p>
+                    In order to promote communication and exchanges between scientific researchers and promote the development of cell biology, the "2024 National Academic Conference of the Chinese Society of Cell Biology · Fuzhou" was held in Fuzhou from April 8 to 12, 2024. <br>
+                    Our team members actively participated in the exchange activities of the conference, and gave a popular science report on "Food Security, China's Rice Road" at the conference, aiming to popularize the history and development of rice research in China for the majority of members. <br>
+                    At the meeting, we proposed to study a high-lysine-rich and nutritious rice that retains a good taste through synthetic biology, which was recognized and supported by other participants. This gives us more confidence in the potential of mastering the field of synthetic biology<br>.
+
+                </p>
+                <div class="photo-box" >
+                    <img src="https://static.igem.wiki/teams/5167/Collaborations3.png" alt="">
+                </div>
+                <div class="photo-box" >
+                    <img src="https://static.igem.wiki/teams/5167/Collaborations4.png" alt="">
+                </div>
+
+                <h2 id="section4">11th CciC</h2>
+                <p>
+                    The Conference of China iGEMer Community (hereinafter referred to as CCiC) is a national exchange meeting independently initiated by China's iGEM participating teams, aiming to provide a platform for resource sharing for participating iGEM teams and Chinese synthetic biology young enthusiasts to promote mutual learning and exchange. Since it was first held in 2014, it has played an important role in the industry, academia and research circles as a national exchange summit related to synthetic biology competitions in China and an important academic communication platform for young synthetic biology enthusiasts in China. At present, CCiC has become one of the largest academic conferences for college students in China.<br>
+                    We and iGEM teams from all over China gathered together to exchange project design and progress, exchange ideas, and listen to wonderful lectures by experts and scholars in the field of synthetic biology. After consulting to understand the strengths and highlights of other team projects, we also provided new ideas for the development of our projects.
+                </p>
+
+                <div class="photo-box" >
+                    <img src="https://static.igem.wiki/teams/5167/Collaborations5.png" alt="">
+                </div>
+                
+   
+            </div>  
+            
+            
+            <a href="#head" class="to-top">back to top</a>  
+            <hr class="end-line" style="width: 80%; align-items: center;">
+
+        
+        </div>
+        
+        </div>
+    </div>
+
+  
+
+  
+</body>  
+</html>
+<script>
+  //文章页面侧边栏固定
+  function makeElementSticky(elementClass) {
+    var element = document.querySelector(elementClass);
+    if (!element) return;
+
+    var offsetTop = element.offsetTop;
+
+    window.addEventListener('scroll', function() {
+      var mainText = document.querySelector('.main-text');
+      var totop = document.querySelector('.to-top');
+      var endLineElement = document.querySelector('.end-line');
+      var headcontainer = document.querySelector('.header-container');
+
+      var headhigh = headcontainer.offsetHeight;
+      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+
+      element.style.top = '';
+
+      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
+        element.classList.add('fixed');
+        mainText.classList.add('fixed');
+        totop.classList.add('show');
+        element.classList.remove('down');
+
+      } else if (window.pageYOffset > endsetTop) {
+        element.classList.remove('fixed'); 
+        element.classList.add('down');
+        element.style.top = (endsetTop - headhigh - 40) + 'px';
+        mainText.classList.remove('fixed');
+        totop.classList.remove('show'); 
+      } else {
+        element.classList.remove('fixed');
+        element.classList.remove('down');
+        mainText.classList.remove('fixed')
+        element.style.top = '';
+        totop.classList.remove('show');
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    makeElementSticky('.sidebar');
+  });
+
+
+  </script> 
+  
+
+
+{% extends "layout.html" %}
+{% block page_content %}
+{% endblock %}

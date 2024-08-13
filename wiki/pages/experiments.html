@@ -1,29 +1,295 @@
-{% extends "layout.html" %}
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Describtion</title>  
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container{
+  position: relative;  
+  height: 100vh; /* 使用视口高度单位，确保全屏 */  
+  width: 100%;
+  background-image: url('/static/picture/head-example.png') ;
+  background-repeat: no-repeat;  
+  background-size: cover;  
+  background-position: center;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.header-title h1{
+  text-align: center;  
+  color: #fff; 
+  font-size: 50px;
+}
+
+.partition-line{
+  width: 1200px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto ;
+}
+
+.sidebar {
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
+}
+
+.sidebar.fixed {
+  height: auto;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+}
+
+
+.main-text.fixed{
+  margin-top: 0px;
+  width: 80%;
+  margin-left: 20%;
+}
+
+.main-text.down{
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a:hover {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.main-text {
+  margin-top: 0px;
+  width: 80%;
+}
+
+.main-text h2{
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.text-item{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-item p {
+  margin-top: 0;
+  text-indent: 2em; 
+}
+.photo-box{
+display: flex;
+height: 300px;
+justify-content: center;
+width: 100%;
+margin-top: 10px;
+}
+
+.photo-box img{
+margin-left: 20px;
+}
+
+.to-top {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+    
+</style>
+
+</head>  
+<body>  
+    <div>
+        <div class="text-container">
+        <div class="header-container" id="head">
+            <div class="header-title">
+                <h1>Experiment-Design</h1>
+            </div>
+        </div>
+        
+        <hr class="partition-line">
+        
+        <div class="content-container">
+        
+            <div class="sidebar">  
+            <ul>  
+                <li><a href="#section1">Improving nutritional quality through rice polyploidization</a></li>  
+                <li><a href="#section2">Choose to edit gluten to increase lysine content in Rice</a></li>  
+                <li><a href="#section3">Knockout of globulin to reduce rice allergenicity</a></li> 
+                <li><a href="#section4">Gene editing technology and vector construction</a></li> 
+            </ul>  
+            </div> 
+        
+            <div class="main-text">  
+            <div class="text-item">  
+        
+                <h2 id="section1">Improving nutritional quality through rice polyploidization</h2> 
+                <p>
+                  We told our PI Professor Yuchi He about our idea of improving the endogenous nutritional quality of rice, and she affirmed our idea. Based on her research on polyploid rice breeding over the years, she told us that, like other polyploid crops that have been widely used, such as triploid watermelon, polyploid rice has the characteristics of generally improved nutrients, which can meet our expectations, and its shape in biomass, stress resistance and other aspects is better than that of conventional ploidy, that is, diploid rice. She suggested that we first double the genome of diploid rice to tetraploid, and then targeted to improve the nutrients we urgently want to improve, namely lysine. Because as a project widely beneficial to people, it is hoped that its product is not only a tool for the production of target products, but also can help the development of food nutrition balance and seed industry.
+                  <br>
+                  In terms of how to realize the technology of targeted improvement of lysine content, our initial consideration was to choose the way of adjusting the lysine metabolism pathway of rice, which is also a common method to improve the lysine content of rice through genetic engineering and metabolic engineering, but its strategy and technical means are contrary to our project (add a hyperlink: see iHP and plant synthetic biology for details, you can click to jump to these two pages respectively). We hope to edit the endogenous genes of rice in the project, rather than the exogenous genes introduced from other species. We sought the help of our PI, who suggested that we might start with gluten, the protein with the highest content of rice endosperm protein, and recommend Dr. Lu Gan, who is engaged in the research of rice storage protein, to us as our second pi to provide us with specific guidance in experiments.
+                </p>
+                <h2 id="section2">What we have done</h2>
+                <p>
+                  Glutenin is the most abundant protein in rice endosperm, accounting for about 80% of the storage protein in rice endosperm. It is encoded by four gene families, GluA, GluB, GluC and GluD. First, it synthesizes protein precursors in the rough endoplasmic reticulum, transports them into the lumen of the endoplasmic reticulum, and then carries them through the processing of the Golgi apparatus to the protein storage vacuole (PSV). The processed mature storage proteins form protein bodies (PB-Ⅱ) in the vacuole and accumulate. On the other hand, in theory, polyploidization will increase the content of gluten, which will also be verified in our experimental results.
+                </p>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/experiment1.png" alt="">
+                </div>
+                <p>
+                  How can the increase of gluten be associated with the increase of lysine? Our PIs suggests that there is often a dose compensation effect at the expression level among the coding genes of proteins encoded by multiple families in rice, that is, if one of the genes encoding less lysine content of glutamine is selected for site directed mutagenesis, then other synthetic genes in this subfamily can be expressed compensably, and correspondingly, the overall increase in lysine content is finally achieved. By constructing the evolutionary tree, we found that the GluB subfamily is the largest, with a total of eight synthetic genes (GluB1 includes two coding genes, GluB1-a and GluB1-b), and whether GluB1 is in the GluB subfamily or in four subfamilies, it the number of lysine residues is the least. It is advantageous to select it as the target gene of site directed mutagenesis to improve the overall lysine content of gluten by using the dose compensation effect.
+                </p>
+                <h2 id="section3">Knockout of globulin to reduce rice allergenicity</h2>
+                <p>
+                  In addition, during the investigation, we found that for some susceptible people, allergenic proteins in high protein foods have a greater risk of sensitization, which is one of the sources of greater uncertainty in food safety. (add a hyperlink: see iHP for details) through consulting the literature, we found that α- globulin is the main allergen in rice, accounting for about 2-8%. It is a 26kDa globulin, and its precursor is 19kDa globulin, which is encoded by a single gene Glb located on chromosome 5. Therefore, we also selected OsGlb as the target gene for site directed mutagenesis.
+                </p>
+
+                <h2 id="section4">Gene editing technology and vector construction</h2>
+                <p>
+                  In terms of gene editing technology, we chose CRISPR/Cas9 technology with relatively mature research and high specificity to construct PYLCRISPR/Cas9Pubi-H multi-target binary vector.<br>
+                  1. first, pCAMBIA-1300 was selected as the vector backbone, and the Cas9 protein expression cassette was integrated into the binary vector. The multi cloning site Bsa I used to load multiple sgRNA expression cassettes was located close to the binary vector RB. The sgRNA expression cassette elements were set on the intermediate plasmid vector, assembled by enzymatic ligation and PCR methods, and then assembled on the binary vector by Golden Gate or Gibson Assembly cloning methods.<br>
+                  2. using self-made isothermal in vitro recombination reaction mixture, multiple fragments of plasmid vector can be cloned and deleted simultaneously.<br>
+                  4. on the basis of constructing the vector of the first group of target (OsGluB1) sgRNA expression cassettes, add the second group of other target (OsGlb) sgRNA expression cassettes, change the Mlu I site in the primer Pgs-GGR by 1 base, so that the Mlu I upstream of LacZ becomes the only site. Mlu I was used to cut the vector into linear shape, and Gibson Assembly was used to clone the second group of target sgRNA expression cassettes.<br>
+                  6. after connecting the linker, amplify the sgRNA expression cassette fragment and directly use Golden Gate position specific primers for a round of PCR amplification.<br>
+                  7. the target OsGluB1 sequence is GGTAAGTCGCAGGGCAACC, and the target OsGlb sequence is TCGTCGTCGGAGTACTACGG. The molar ratio of vector to each insert is 1:4-6. Enzyme digestion and ligation were carried out with variable temperature cycles for about 10-15 cycles, and the unused ligation products were frozen for further amplification if necessary.<br>
+
+                </p>        
+            </div>  
+            
+            
+            <a href="#head" class="to-top">back to top</a>  
+            <hr class="end-line" style="width: 80%; align-items: center;">
+
+            <p>
+                How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
+                students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
+                fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
+                moment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi mollitia maxime, minus dignissimos 
+                hic exercitationem ut soluta ipsam veritatis sequi quod temporibus eaque itaque optio vitae accusantium? Quas,
+                voluptas! <br>
+            </div>
+        
+        </div>
+        
+        </div>
+    </div>
+
   
-{% block title %}Experiments{% endblock %}
-{% block lead %}Describe the research, experiments, and protocols you used in your iGEM project.{% endblock %}
 
+  
+</body>  
+</html>
+<script>
+  //文章页面侧边栏固定
+  function makeElementSticky(elementClass) {
+    var element = document.querySelector(elementClass);
+    if (!element) return;
+
+    var offsetTop = element.offsetTop;
+
+    window.addEventListener('scroll', function() {
+      var mainText = document.querySelector('.main-text');
+      var totop = document.querySelector('.to-top');
+      var endLineElement = document.querySelector('.end-line');
+      var headcontainer = document.querySelector('.header-container');
+
+      var headhigh = headcontainer.offsetHeight;
+      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+
+      element.style.top = '';
+
+      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
+        element.classList.add('fixed');
+        mainText.classList.add('fixed');
+        totop.classList.add('show');
+        element.classList.remove('down');
+
+      } else if (window.pageYOffset > endsetTop) {
+        element.classList.remove('fixed'); 
+        element.classList.add('down');
+        element.style.top = (endsetTop - headhigh - 40) + 'px';
+        mainText.classList.remove('fixed');
+        totop.classList.remove('show'); 
+      } else {
+        element.classList.remove('fixed');
+        element.classList.remove('down');
+        mainText.classList.remove('fixed')
+        element.style.top = '';
+        totop.classList.remove('show');
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    makeElementSticky('.sidebar');
+  });
+
+
+  </script> 
+  
+
+
+{% extends "layout.html" %}
 {% block page_content %}
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>Describe the research, experiments, and protocols you used in your iGEM project. These should be detailed enough for another team to repeat your experiments.</p>
-    <p>If you made Parts this year, please remember to put all information, characterization, and measurement data on the Part's Main Page on the <a href="https://parts.igem.org/Main_Page">Registry</a>.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Nantes/Experiments">2019 Nantes</a></li>
-      <li><a href="https://2019.igem.org/Team:TU_Eindhoven/Experiments">2019 TU Eindhoven</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Demonstrate">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Amsterdam/Experiments">2020 Amsterdam</a></li>
-      <li><a href="https://2020.igem.org/Team:NCTU_Formosa/Experiments">2020 NCTU Formosa</a></li>
-      <li><a href="https://2020.igem.org/Team:USAFA/Experiments">2020 USAFA</a></li>
-    </ul>
-  </div>
-</div>
-
 {% endblock %}

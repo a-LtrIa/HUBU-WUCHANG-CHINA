@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Describtion</title>  
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container{
+  position: relative;  
+  height: 100vh; /* 使用视口高度单位，确保全屏 */  
+  width: 100%;
+  background-image: url('/static/picture/head-example.png') ;
+  background-repeat: no-repeat;  
+  background-size: cover;  
+  background-position: center;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.header-title h1{
+  text-align: center;  
+  color: #fff; 
+  font-size: 50px;
+}
+
+.partition-line{
+  width: 1200px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto ;
+}
+
+.sidebar {
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
+}
+
+.sidebar.fixed {
+  height: auto;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+}
+
+
+.main-text.fixed{
+  margin-top: 0px;
+  width: 80%;
+  margin-left: 20%;
+}
+
+.main-text.down{
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow-y: auto; 
+  transition: top 0.3s;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a:hover {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.main-text {
+  margin-top: 0px;
+  width: 80%;
+}
+
+.main-text h2{
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.text-item{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-item p {
+  margin-top: 0;
+  text-indent: 2em; 
+}
+.photo-box{
+display: flex;
+height: 300px;
+justify-content: center;
+width: 100%;
+margin-top: 10px;
+}
+
+.photo-box img{
+margin-left: 20px;
+}
+
+.to-top {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+
+    
+</style>
+
+</head>  
+<body>  
+    <div>
+        <div class="text-container">
+        <div class="header-container" id="head">
+            <div class="header-title">
+                <h1>Experiment-result</h1>
+            </div>
+        </div>
+        
+        <hr class="partition-line">
+        
+        <div class="content-container">
+        
+            <div class="sidebar">  
+            <ul>  
+                <li><a href="#section1">Cytological differences between diploid and tetraploid rice seeds after polyploidization</a></li>  
+                <li><a href="#section2">Difference of protein content in diploid and tetraploid rice seeds after polyploidization</a></li>  
+                <li><a href="#section3">Mutant identification results after editing OsGluB1 and OsGlb genes using CRISPR/Cas9 gene editing technology</a></li> 
+                <li><a href="#section4">Differences in protein and amino acid contents between tetraploid digenic mutant rice and diploid wild-type rice</a></li> 
+            </ul>  
+            </div> 
+        
+            <div class="main-text">  
+            <div class="text-item">  
+        
+                <h2 id="section1">Improving nutritional quality through rice polyploidization</h2> 
+                <h3>1、Aleurone layer thickness increases</h3>
+                <div class="photo-box" >
+                  <img src="https://static.igem.wiki/teams/5167/result1.png" alt="">
+                </div>
+                <p style="font-size: 9px; text-align: right;">Fig. 1 changes in endosperm structure of diploid and tetraploid rice seeds</p>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result2.png" alt="">
+                </div>
+                <p style="font-size: 9px; text-align: right;">Fig. 2 changes in aleurone layer structure of diploid and tetraploid rice seeds at 17daf and 25daf</p>
+                
+                <p>
+                  We observed the structure of aleurone layer cells under the light microscope, and found that compared with diploid rice seeds, the number of aleurone layer cells in tetraploid rice seeds did not change significantly, and the thickness of aleurone layer cells appeared significant thickening phenomenon (Fig. 1a-d). The results were verified by scanning electron microscopy (Fig. 2) and transmission electron microscopy (Fig. 3a, C, e and G) of seeds developed to 17 and 25 DAF. Figure 3a and C show the cell structure of the side and abdomen of 9311-2x and 9311-4x seeds. The number of aleurone layer cells remained between 1-2, and the thickness of a single aleurone cell increased by 32.92% compared with 9311-2x. Figure 3B and d show the cell structure of the side and abdomen of a3-2x and a3-4x seeds. The number of aleurone layer cells remained around 2, and the thickness of a single aleurone cell a3-4x increased by 23.64%.  
+                </p>
+
+                <h3>2、PSV and pb- Ⅱ have more and denser structures</h3>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result3.png" alt="">
+                </div>
+                <p style="font-size: 9px; text-align: right;">Fig. 3 observation of aleurone layer thickness and number of proteosomes in diploid and tetraploid rice seeds by transmission electron microscopy</p>
+
+                <p>
+                  Fig. 3 B, D, F, h, J show the structural characteristics of proteosomes in the sublayer cells of 9311 and A3. Comparing the two kinds of proteosomes with different light and deep colors, it can be clearly found that PSV is deeply stained, with irregular shape, but abundant content, accounting for more than 80% of all proteosomes; The pb-i staining was light, regular spherical, and the content was less than 20%. Compared with diploid rice (9311-2x, a3-2x), the PSV in tetraploid rice (9311-4x, a3-4x) was more irregular and more frequent, and the number of PSV in unit area increased by 47.67% and 59.37%, respectively. The sub aleurone layer of tetraploid rice seeds stained by PAS reagent and CBB showed more blue particles under the light microscope, indicating more protein components (Fig. 3e-h). Therefore, it can be inferred that polyploidization promoted the formation of more PSVs, which in turn increased gluten content.
+                  <br>
+                  (The relationship between aleurone layer, PSV and Pb - Ⅱ structure and the content of protein and lysine in rice is shown in <a href="{{ url_for('pages', page='description') }}">Project-Description</a>)
+                </p>
+
+
+
+                <h2 id="section2">Difference of protein content in diploid and tetraploid rice seeds after polyploidization</h2>
+                <p>
+                  Glutenin is the most abundant protein in rice endosperm, accounting for about 80% of the storage protein in rice endosperm. It is encoded by four gene families, GluA, GluB, GluC and GluD. First, it synthesizes protein precursors in the rough endoplasmic reticulum, transports them into the lumen of the endoplasmic reticulum, and then carries them through the processing of the Golgi apparatus to the protein storage vacuole (PSV). The processed mature storage proteins form protein bodies (PB-Ⅱ) in the vacuole and accumulate. On the other hand, in theory, polyploidization will increase the content of gluten, which will also be verified in our experimental results.
+                </p>
+
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result4.png" alt="">
+                </div>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result5.png" alt="">
+                </div>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result6.png" alt="">
+                </div>
+
+                <p>
+                  In terms of the increase of total protein, gluten and gliadin content, variety 9311 performed better than variety A3 (the greater the increase of total protein and gluten, the better, and the smaller the increase of gliadin, for the reasons, see <a href="{{ url_for('pages', page='description') }}">project description</a>,), which showed that polyploidization improved the nutritional quality of variety 9311 more than variety A3. However, in terms of the increase of globulin content, variety A3 performed better than variety 9311, so the smaller the increase of allergen globulin, the better. This shows that variety 9331 is more serious than variety A3 in aggravating allergy. Therefore, we retained these two varieties for gene editing under the tetraploid background, hoping to obtain mutants with the largest increase in total protein, gluten and lysine, the smallest increase in gliadin, and the largest decrease in globulin after site-specific editing of OsGluB1 and OsGlb genes.
+                </p>
+
+                <h2 id="section3">Mutant identification results after editing OsGluB1 and OsGlb genes using CRISPR/Cas9 gene editing technology</h2>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result7.png" alt="">
+                </div>
+                <p>
+                  The OsGluB1 target gene realizes the mutation of this site through the deletion of 1-2bp (base A), and the OsGlb target gene realizes the mutation of this site through the addition of 1bp (base A or T). The tetraploid homozygous mutation types are OsGluB-1 deletion 1bp and OsGlb insertion 1bp (osglub-1/osglb-4x-1), OsGluB-1 deletion 2bp and OsGlb insertion 1bp (osglub-1/osglb-4x-2).
+                </p>
+
+                <h2 id="section4">Differences in protein and amino acid contents between tetraploid digenic mutant rice and diploid wild-type rice</h2>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result8.png" alt="">
+                </div>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result9.png" alt="">
+                </div>
+                <p>
+                  After gene editing, the total protein content of the tetraploid gluten globulin digenic mutant was significantly increased, almost without globulin. In terms of lysine content, after polyploidization and gene editing, the lysine content of tetraploid rice was significantly higher than that of diploid, and the tetraploid double gene mutant rice was significantly higher than that of tetraploid wild-type rice, achieving two significant increases in lysine content. It is in line with our expectations in terms of nutritional quality and food safety.
+                </p>
+
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result10.png" alt="">
+                </div>
+                <div class="photo-box">
+                  <img src="https://static.igem.wiki/teams/5167/result11.png" alt="">
+                </div>
+            </div>  
+            
+            
+            <a href="#head" class="to-top">back to top</a>  
+            <hr class="end-line" style="width: 80%; align-items: center;">
+
+            <p>
+                How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
+                students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
+                fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
+                moment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi mollitia maxime, minus dignissimos 
+                hic exercitationem ut soluta ipsam veritatis sequi quod temporibus eaque itaque optio vitae accusantium? Quas,
+                voluptas! <br>
+            </div>
+        
+        </div>
+        
+        </div>
+    </div>
+
+  
+
+  
+</body>  
+</html>
+<script>
+  //文章页面侧边栏固定
+  function makeElementSticky(elementClass) {
+    var element = document.querySelector(elementClass);
+    if (!element) return;
+
+    var offsetTop = element.offsetTop;
+
+    window.addEventListener('scroll', function() {
+      var mainText = document.querySelector('.main-text');
+      var totop = document.querySelector('.to-top');
+      var endLineElement = document.querySelector('.end-line');
+      var headcontainer = document.querySelector('.header-container');
+
+      var headhigh = headcontainer.offsetHeight;
+      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+
+      element.style.top = '';
+
+      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
+        element.classList.add('fixed');
+        mainText.classList.add('fixed');
+        totop.classList.add('show');
+        element.classList.remove('down');
+
+      } else if (window.pageYOffset > endsetTop) {
+        element.classList.remove('fixed'); 
+        element.classList.add('down');
+        element.style.top = (endsetTop - headhigh - 40) + 'px';
+        mainText.classList.remove('fixed');
+        totop.classList.remove('show'); 
+      } else {
+        element.classList.remove('fixed');
+        element.classList.remove('down');
+        mainText.classList.remove('fixed')
+        element.style.top = '';
+        totop.classList.remove('show');
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    makeElementSticky('.sidebar');
+  });
+
+
+  </script> 
+  
+
+
+{% extends "layout.html" %}
+{% block page_content %}
+{% endblock %}
