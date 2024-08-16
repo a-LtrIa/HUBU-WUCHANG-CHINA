@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+
+    <style>
+
+        .menu-container{
+            display: flex;
+            width: 100%;
+            padding:0 5%;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .menu-container ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu-container ul li{
+            width:  130px;
+            padding: 10px 10px;
+            position: relative;
+        }
+        .down_bar{
+            display: none;
+        }
+
+        @media(max-width=920px){
+
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1 class="logo">logo</h1>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>  
+            <li><a href="{{ url_for('pages', page='team') }}">Team</a>
+                <div class="down_bar">
+                    <ul>
+                        <li><a href="{{ url_for('pages', page='team') }}">Team Members</a></li>
+                        <li><a href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+                        <li><a href="{{ url_for('pages', page='collaborations') }}">Collaborations</a></li>
+                        <li><a href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
+                        <li><a href="{{ url_for('pages', page='achievement') }}">Achievement</a></li>
+      
+                    </ul>
+                </div>  
+            </li>
+               
+            <li><a href="{{ url_for('pages', page='description') }}">Project</a>
+                <div class="down_bar">
+                    <ul>
+                        <li>
+                            <a href="{{ url_for('pages', page='description') }}">Description</a>
+                        </li>
+                        <li><a href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+                        <li><a href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+                        <li><a href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
+                        <li><a href="{{ url_for('pages', page='safety') }}">Safety</a></li>
+                        <li><a href="{{ url_for('pages', page='plant-synthetic-biology') }}">Plant Synthetic Biology</a></li>
+                    </ul>
+                </div>
+            </li>  
+      
+            <li><a href="{{ url_for('pages', page='wet-lab') }}">Wet lab</a>
+              <div class="down_bar">
+                  <ul>
+                      <li><a href="{{ url_for('pages', page='design') }}">Design</a></li>
+                      <li><a href="{{ url_for('pages', page='result') }}">result</a></li>
+                      <li><a href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+                      <li><a href="{{ url_for('pages', page='proof') }}">Proof of Concept</a></li>
+                      <li><a href="{{ url_for('pages', page='part') }}">Part</a></li>
+                      <li><a href="{{ url_for('pages', page='protocol') }}">Protocol</a></li>
+                  </ul>
+              </div>
+          </li>  
+      
+            <li><a href="{{ url_for('pages', page='model') }}">Model</a></li>  
+      
+      
+      
+            <li><a href="{{ url_for('pages', page='human-practices') }}">HP</a>
+                <div class="down_bar">
+                    <ul>
+                        <li><a href="{{ url_for('pages', page='human-practices') }}">Integrated Human Practices</a></li>  
+                        <li><a href="{{ url_for('pages', page='education') }}">Education and Inclusivity</a></li>
+                        <li><a href="{{ url_for('pages', page='communication-and-cooperation') }}">Communication and Cooperation</a></li>
+                    </ul>
+                </div>
+            </li> 
+                
+        </ul>
+      </div>
+</body>
+</html>
