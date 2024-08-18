@@ -1,35 +1,121 @@
-<footer class="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
-  <div class="container">
-    <div class="row mb-4">
-      <div class="col-lg-6 col-xs-12">
-        <h4 class="mb-3">Heading</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .page-footer{
+      background-image: url('https://static.igem.wiki/teams/5167/paddy.png');
+      background-size: contain;
+      
+    }
+    .footer-container{
+      position: relative;
+      background-color: rgba(43, 43, 43, 0.3);
+      padding: 70px;
+    }
+    .social-media{
+      display: flex;
+      justify-content: center;
+    }
+    .social-media img{
+      margin-top: 5px;
+      width: 35px;
+      margin-left: 20px;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+    .social-media a:hover img{
+      transform: scale(1.1);
+    }
+
+    .footer-content{
+      display: flex;
+      justify-content: space-around;
+    }
+    .footer-content h4{
+      color: white;
+    }
+
+    .footer-link ul{
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .footer-link a{
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-link a:hover{
+      color: grey;
+      transform: scale(1.1);
+    }
+
+    .license-container{
+      margin-bottom: 10px;
+    }
+    .license-content a{
+      color: rgb(225, 225, 225);
+    }
+
+    
+  </style>
+</head>
+<body>
+  <footer class="page-footer">
+    <div class="footer-container">
+
+      <div class="footer-content">
+
+        <div class="sponsor">
+          <h4>Sponsor:</h4>
+          <div class="sponsor-logo">
+
+          </div>
+        </div>
+        <div class="footer-link">
+          <h4 class="">Links:</h4>
+            <ul class="">
+              <li><a href="{{ url_for('pages', page='team') }}">Our Team</a></li>
+              <li><a href="{{ url_for('pages', page='description') }}">project</a></li>
+              <li><a href="{{ url_for('pages', page='wet-lab') }}">wet-lab</a></li>
+              <li><a href="{{ url_for('pages', page='model') }}">Model</a></li>  
+              <li><a href="{{ url_for('pages', page='education') }}">Education and Inclusivity</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+          <h4>Contact:</h4>
+          <div class="social-media">
+            <a href="https://mp.weixin.qq.com/">
+              <img src="https://static.igem.wiki/teams/5167/wechat.png" alt="wechat">
+            </a>
+            <a href="#">
+              <img src="https://static.igem.wiki/teams/5167/twitter.png" alt="">
+            </a>
+            <a href="#">
+              <img src="https://static.igem.wiki/teams/5167/bilibili.png" alt="">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-3 col-xs-12">
-        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
-          <ul class="m-2 p-2">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">Nam mauris velit</a></li>
-            <li><a href="#">Etiam vitae mauris</a></li>
-            <li><a href="#">Fusce scelerisque</a></li>
-            <li><a href="#">Sed faucibus</a></li>
-            <li><a href="#">Mauris efficitur nulla</a></li>
-          </ul>
-      </div>
-      <div class="col-lg-3 col-xs-12">
-        <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-        <p class="mb-0">(541) 754-3010</p>
-        <p>info@hsdf.com</p>
+      <hr>
+      <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
+      <div class="license-container">
+        <div class="license-content">
+          <p class=>
+            <small>© 2024 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small>
+          </p>
+          <p>
+            <small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2024/hubu-wuchang-china">gitlab.igem.org/2024/hubu-wuchang-china</a>.</small>
+          </p>
+
+        </div>
       </div>
     </div>
-    <hr>
-    <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
-    <div class="row mt-4">
-      <div class="col">
-        <p class="mb-0"><small>© 2024 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
-	      <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2024/hubu-wuchang-china">gitlab.igem.org/2024/hubu-wuchang-china</a>.</small></p>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
+</body>
+</html>

@@ -1,51 +1,338 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Describtion</title>  
+<style>
+  ::-webkit-scrollbar{
+    width: 5px;
+    background-color:#dadada;
+  }
+
+  ::-webkit-scrollbar-track{
+    /* background:black; */
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #faad14;
+    border-radius: 10px;
+
+  }
+
+  .text-container{
+    background-color: #f4f4f4;
+  }
+
+.header-container{
+  position: relative;  
+  height: 100vh; /* 使用视口高度单位，确保全屏 */  
+  width: 100%;
+  background-image: url(https://static.igem.wiki/teams/5167/head-example.png) ;
+  background-repeat: no-repeat;  
+  background-size: cover;  
+  background-position: center;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.header-title h1{
+  text-align: center;  
+  color: #fff; 
+  font-size: 50px;
+}
+
+.partition-line{
+  width: 1200px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.content-container{
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto ;
+}
+
+
+.sidebar {
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
+}
+
+.sidebar.fixed {
+  /* height: auto; */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 5%;
+  width: 18.5%;
+}
+
+.sidebar.absoute{
+  position: relative;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  width: 20%;
+  left: 0;
+}
+
+.main-text.fixed{
+  margin-top: 0px;
+  width: 70%;
+  margin-left: 22.5%;
+}
+
+.main-text.down{
+  position: relative; /* 初始位置 */
+  width: 20%;
+  height: 100%;
+  overflow-y: auto; 
+  transition: top 0.3s; /* 平滑过渡 */
+}
+
+.sidebar h1{
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar ul li a:hover {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+.main-text {
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  background-color: #fff;
+  margin-top: 0;
+  width: 70%;
+  margin-left: 2.5%;
+}
+
+.main-text h2{
+  margin-top: 20px;
+  margin-bottom: 0%;
+}
+
+.text-item{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-item p {
+  margin-top: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  /* 抬头空格 */
+  /* text-indent: 2em;  */   
+}
+.photo-box{
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.photo-box img{
+  margin-left: 20px;
+}
+
+.to-top {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+    
+</style>
+
+</head>  
+<body>  
+    
+  <div class="text-container">
+    <div class="header-container" id="head">
+      <div class="header-title">
+        <h1>Human Practices</h1>
+      </div>
+    </div>
+    
+    <hr class="partition-line">
+    
+    <div class="content-container">
+    
+      <div class="sidebar">  
+        <h1>Menu</h1>
+      <ul>  
+          <li><a href="#section1">11th CCiC</a></li>  
+          <li><a href="#section2">Hubei Synthetic Biology Open Conference</a></li>  
+          <li><a href="#section3">Synthetic Biology Challenges</a></li> 
+          <li><a href="#section4">Team Communication</a></li> 
+      </ul>  
+      </div> 
+  
+      <div class="main-text">  
+        <div class="text-item">  
+    
+          <h2 id="section1"></h2> 
+          <div class="photo-box" >
+            <img src="https://static.igem.wiki/teams/5167/hp1.png" alt="">
+          </div>
+          <p>
+            We believe that there is a lack of communication with other iGEM teams, that there is still much room for progress in our project, and we also hope to get the guidance of professional judges.
+            Therefore, we participated in 2024 CCiC. At this exchange meeting, we learned an important lesson, that is, how to carry out effective human practice activities, understood the two-way dialogue between the project and the community advocated by HP, and made us realize the effectiveness and importance of mathematical modeling. We also focused on building our modeling work later.
+            At the same time, the judge teacher raised questions about the food safety issues involved in our project and the public's acceptance of our project. We focused on thinking about the problems in these two directions, so that we had a new direction of efforts. We solved this problem by consulting professional departments, understanding the legal provisions, and consulting the iGEM organizing committee.<br>
+            At CCiC, we listened to the reports of other iGEM teams, initially understood the advantages and highlights of each team's projects, and also provided new ideas for our own project development. In addition, we have made contact with other teams based on plants and hope to make common progress through communication in the future. In short, this CCiC has benefited us a lot. It has provided valuable experience and suggestions for the success of our project. <br>
+          </p>
+
+          <h2 id="section2">Hubei Synthetic Biology Open Conference</h2>
+          <div class="photo-box" >
+            <img src="https://static.igem.wiki/teams/5167/hp2.png" alt="">
+          </div>
+          <p>
+            We actively participate in academic conferences in the field of synthetic biology, aiming to learn the advantages of other teams, understand our shortcomings and further improve them.
+            For example, we participated in the 2024 Hubei synthetic biology open conference, which was hosted by the College of life sciences of Hubei University and actively participated by several synthetic biology teams.<br>
+            At the conference, researcher Xiao Yi from Shenzhen Institute of advanced technology, Chinese Academy of Sciences introduced synthetic biology and synthetic biology competition to us.
+            During the meeting, several iGEM teams in Central China reported, which promoted the communication and cooperation between us and iGEM teams in Central China, and also promoted synthetic biology to the public.<br>
+            In addition, we also held a round table meeting, where several senior professors exchanged views on the relationship between their research fields and synthetic biology, and shared their experience of bonding with the field of synthetic biology. And encourage us to join the team of synthetic biology. In the Q & A session, we asked Mr. Xiao Yi about how to integrate science and art. Mr. Yi suggested that artists should effectively participate in scientific research and stimulate their deeper understanding of science through this personal experience. It can also improve the expression of art. Mr. Xiao Yi also suggested that the art majors in our team should start from simplicity, and then understand each other, so as to complete more creative work.<br>
+            We also asked Mr. Xiao Yi whether our project is in line with the concept of synthetic biology, and Mr. Xiao Yi clearly affirmed our question. Because our project involves plant chromosome doubling technology and gene editing technology, which is to redesign existing natural organisms.
+
+          </p>
+
+          <h2 id="#section3">Synthetic Biology Challenges</h2>
+          <div class="photo-box" >
+            <img src="https://static.igem.wiki/teams/5167/hp3.png" alt="">
+          </div>
+
+          <h2 id="#section4">2024 Wuhan Seed Industry Expo</h2>
+          <div class="photo-box" >
+            <img src="https://static.igem.wiki/teams/5167/hp5.png" alt="">
+          </div>
+
+          <p>
+            In order to further grasp the industry information, understand the current industrial demand of the rice industry, and whether the project can help solve the problem of industrial demand, we participated in the Wuhan Seed Industry Expo on June 3, 2024.<br>
+            We won an exclusive booth. At our booth, the students of the team introduced the research background, technical principles, project progress, and product data and application to the visitors. Further promote the innovative projects of the team.<br>
+            In the afternoon of June 4, six student representatives of our team introduced polyploid nutrition fortified rice to important leaders such as the vice governor of Hubei Province and the mayor of Wuhan who came to visit again. They paid special attention to our project and highly affirmed our work. We also talked with Mr. Li, a professional enterprise consultant. After learning that the project is still in the stage of small-scale cultivation in the laboratory for the time being, Mr. Li said that unlike traditional breeding to improve the yield, the application of the project will make a disruptive contribution to the universal nutritional value of staple grains. Through this activity, we learned that the practical application of polyploid nutrition fortified rice in agriculture is still rare, so we still need a lot of practice to further implement. It confirms that our project can help solve the problem of industrial demand. We also learned that in addition to achieving excellent quality, it is also important to promote good products through cultural and creative, marketing and publicity channels. <br>
+          </p>
+
+          <h2 id="#section4">Team Communication</h2>
+          <div class="photo-box" >
+            <img src="https://static.igem.wiki/teams/5167/hp4.png" alt="">
+          </div>
+          <p>
+            On March 24, we went to Wuhan University with the HUBU-China team to communicate with the WHU-iGEM team. There, the other two teams introduced their projects to us. We found that the HP work of the HUBU-China team had carried out extensive research and sample statistical analysis. The WHU-iGEM team attached great importance to their project safety personality, which provided many references for us to adjust our project later. Moreover, they raised questions about the homozygosity rate of our project's gene editing. After the communication, we consulted our PI and found a solution. <a href="{{ url_for('pages', page='experiments') }}">See Experiment for details</a> <br>
+          </p>
+
+
+          <p style="font-size: 9px; text-align: right;"></p>
+    
+
+        </div>
+        <a href="#head" class="to-top">to top</a>  
+        <hr class="end-line" style="width: 80%; justify-content: center;">
+    
+      </div>
+    </div>
+  </div>
+    
+
+  
+
+  
+</body>  
+</html>
+<script>
+  //文章页面侧边栏固定
+  function makeElementSticky(elementClass) {
+    var element = document.querySelector(elementClass);
+    if (!element) return;
+
+    var offsetTop = element.offsetTop;
+
+    window.addEventListener('scroll', function() {
+      var mainText = document.querySelector('.main-text');
+      var totop = document.querySelector('.to-top');
+      var endLineElement = document.querySelector('.end-line');
+      var headcontainer = document.querySelector('.header-container');
+
+      var headhigh = headcontainer.offsetHeight;
+      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
+
+      element.style.top = '';
+
+      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
+        element.classList.add('fixed');
+        mainText.classList.add('fixed');
+        totop.classList.add('show');
+        element.classList.remove('down');
+
+      } else if (window.pageYOffset > endsetTop) {
+        element.classList.remove('fixed'); 
+        element.classList.add('down');
+        element.style.top = (endsetTop - headhigh - 40) + 'px';
+        mainText.classList.remove('fixed');
+        totop.classList.remove('show'); 
+      } else {
+        element.classList.remove('fixed');
+        element.classList.remove('down');
+        mainText.classList.remove('fixed')
+        element.style.top = '';
+        totop.classList.remove('show');
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    makeElementSticky('.sidebar');
+  });
+
+
+  </script> 
+  
+
+
 {% extends "layout.html" %}
-  
-{% block title %}Human Practices{% endblock %}
-{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
-
 {% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #2</h4>
-      <p>Explain how you have determined your work is responsible and good for the world.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2024 Medals Page</a> for more information.</p>
-    </div>
-  
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Integrated Human Practices</h4>
-      <p>How does your project affect society and how does society influence the direction of your project? How might ethical considerations and stakeholder input guide your project purpose and design and the experiments you conduct in the lab? How does this feedback enter into the process of your work all through the iGEM competition? Document a thoughtful and creative approach to exploring these questions and how your project evolved in the process to compete for this award!</p>
-      <p>To compete for the Best Integrated Human Practices prize, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>At iGEM we believe societal considerations should be upfront and integrated throughout the design and execution of synthetic biology projects. “Human Practices” refers to iGEM teams' efforts to actively consider how the world affects their work and their work affects the world. Through your Human Practices activities, your team should demonstrate how you have thought carefully and creatively about whether your project is responsible and good for the world. We invite you to explore issues relating (but not limited) to the ethics, safety, security, and sustainability of your project, and to show how this exploration feeds back into your project purpose, design, and execution.</p>
-    <p>Please note you can compete for the Silver Medal criterion #2 and the Best Integrated Human Practices prize with this page.</p>
-    <p>For more information, please see the <a href="https://responsibility.igem.org/human-practices/what-is-human-practices">Human Practices Hub</a>.</p>
-    <p>On this page, your team should document all of your Human Practices work and activities. You should write about the Human Practices topics you considered in your project, document any activities you conducted to explore these topics (such as engaging with experts and stakeholders), describe why you took a particular approach (including referencing any work you built upon), and explain if and how you integrated takeaways from your Human Practices work back into your project purpose, design and/or execution.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Thessaly/Human_Practices">2019 Thessaly</a></li>
-      <li><a href="https://2019.igem.org/Team:Linkoping_Sweden/Human_Practices">2019 Linkoping Sweden</a></li>
-      <li><a href="https://2019.igem.org/Team:FDR-HB_Peru/Human_Practices">2019 FDR HB Peru</a></li>
-      <li><a href="https://2020.igem.org/Team:William_and_Mary/Human_Practices">2020 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:Rochester/Human_Practices">2020 Rochester</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Human_Practices">2020 Leiden</a></li>
-      <li><a href="https://2020.igem.org/Team:Baltimore_BioCrew/Human_Practices">2020 Baltimore BioCrew</a></li>
-    </ul>
-  </div>
-</div>
-
 {% endblock %}
