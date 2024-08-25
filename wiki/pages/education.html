@@ -7,6 +7,10 @@
 <title>Education</title>  
 <style>
 
+  html {
+      scroll-behavior: smooth;
+  }
+
   ::-webkit-scrollbar{
     width: 5px;
     background-color:#dadada;
@@ -47,13 +51,13 @@
 }
 
 .partition-line{
-  width: 1200px;
+  width: 95vw;
   align-items: center;
   margin-bottom: 0;
 }
 
 .content-container{
-  width: 90%;
+  width: 90vw;
   display: flex;
   justify-content: start;
   margin-top: 10px;
@@ -64,8 +68,8 @@
 
 .sidebar {
   position: relative; /* 初始位置 */
-  width: 20%;
-  height: 100%;
+  width: 18vw;
+  height: 100vh;
   background: #ffffff;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   border-radius: 15px;
@@ -74,20 +78,13 @@
 }
 
 .sidebar.fixed {
-  /* height: auto; */
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   position: fixed;
   top: 0;
-  left: 5%;
-  width: 18.5%;
+  left: 4.8vw;
+  width: 18vw;
 }
 
-.sidebar.absoute{
-  position: relative;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  width: 20%;
-  left: 0;
-}
 
 .main-text.fixed{
   margin-top: 0px;
@@ -531,6 +528,7 @@
         element.classList.remove('fixed'); 
         element.classList.add('down');
         element.style.top = (endsetTop - headhigh - 40) + 'px';
+        // element.style.paddingBottom = 'px';
         mainText.classList.remove('fixed');
         totop.classList.remove('show'); 
       } else {

@@ -1,24 +1,15 @@
-
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Education</title>  
-<style>
-  body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.header-container{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .header-container{
   position: relative;  
-  height: 100vh; /* 使用视口高度单位，确保全屏 */  
+  height: 100vh; 
   width: 100%;
-  background-image: url('/static/picture/head-example.png') ;
+  background-image: url(https://static.igem.wiki/teams/5167/paddy.png) ;
   background-repeat: no-repeat;  
   background-size: cover;  
   background-position: center;  
@@ -34,399 +25,713 @@
   font-size: 50px;
 }
 
-.partition-line{
-  width: 1200px;
-}
+.attribution-container h1{
+  margin-left: 15px;
 
-.content-container{
-  display: flex;
-  justify-content: start;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto ;
 }
-
-.sidebar {
-  position: relative; /* 初始位置 */
-  width: 20%;
-  height: 100%;
-  background: #f4f4f4;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+.att-card{
+  width: 49%; 
+  height: 50vh;
+  margin-left: 10px; 
+  margin-bottom: 15px;
+  background-color: #fff; 
   border-radius: 10px;
-  overflow-y: auto; 
-  transition: top 0.3s; /* 平滑过渡 */
-}
-
-.sidebar.fixed {
-  background: #f4f4f4;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20%;
+  overflow: auto;
 }
+  </style>
+</head>
+<body>
 
-
-.main-text.fixed{
-  margin-top: 0px;
-  width: 80%;
-  margin-left: 20%;
-}
-
-.main-text.down{
-  position: relative; /* 初始位置 */
-  width: 20%;
-  height: 100%;
-  background: #f4f4f4;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow-y: auto; 
-  transition: top 0.3s;
-}
-
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-.sidebar ul li a:hover {
-  background-color: #ddd;
-  border-radius: 10px;
-}
-
-.main-text {
-  margin-top: 0px;
-  width: 80%;
-}
-
-.main-text h2{
-  margin-top: 0%;
-  margin-bottom: 0%;
-}
-
-.text-item{
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.text-item p {
-  margin-top: 0;
-  text-indent: 2em; 
-}
-.photo-box{
-display: flex;
-height: 300px;
-justify-content: center;
-width: 100%;
-margin-top: 10px;
-}
-
-.photo-box img{
-margin-left: 20px;
-}
-
-.to-top {
-  display: none; 
-  position: fixed;
-  bottom: 20px; 
-  right: 20px;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  z-index: 1000;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.to-top.show {
-  display: block;
-  opacity: 1;
-}
-
-    
-</style>
-
-</head>  
-<body>  
-  <div>
-    <div class="text-container">
-      <div class="header-container" id="head">
-          <div class="header-title">
-              <h1>Education</h1>
-          </div>
+  <div class="attribution-container" style=" background-color: #f4f4f4;">
+    <div class="header-container" id="head">
+      <div class="header-title">
+        <h1>Attributions</h1>
       </div>
-    
-      <hr class="partition-line">
-    
-      <div class="content-container">
-    
-        <div class="sidebar">  
-          <ul>  
-            <li><a href="#section1"></a></li>  
-            <li><a href="#1.1"></a></li>
-            <li><a href="#1.2"></a></li>
-            <li><a href="#1.3"></a></li>
-            <li><a href="#1.4"></a></li>
-            <li><a href="#1.5"></a></li>
-            <li><a href="#1.6"></a></li>
-            <li><a href="#1.7"></a></li>
-            <li><a href="#1.8"></a></li>
-            <li><a href="#1.9"></a></li>
-            <li><a href="#1.91"></a></li>
-            <li><a href="#1.92"></a></li>
-    
-            <li><a href="#section2"></a></li>  
-            <li><a href="#section3"></a></li> 
-            <li><a href="#section4"></a></li> 
-          </ul>  
-        </div> 
-    
-        <div class="main-text">  
-          <div class="text-item">  
-    
-            <h2 id="section1"></h2> 
-              <h3 id="1.1"></h3>
-              <p>
-               
+    </div>
 
-                <br>
-              </p>
-              <h3 id="1.2"></h3>
-              <p>
+    <h1>1. Team Member Contributions</h1>
+    <div class="attributions-cards" style="width: 100%; display: flex;   flex-wrap: wrap;">
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>Ziying Qiu</h2>
+          <h3>STUDENT LEADER</h3>
+          <p><strong>Tasks:</strong><br>
+            Analysis, Conceptualization, Background Research, Investigation, Notebook/record keeping, Project Administration, Public Engagement, Visualization, Writing, Safety.          </p>
+          <p><strong>Specific Tasks:</strong><br>
 
-              
-              </p>
-              <h3 id="1.3"></h3>
-              <p>
-               
-              </p>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education1.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education2.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education3.png" alt="">
-              </div>
-              <h3 id="1.4"></h3>
-              <p>
-                
-                
-              </p>
-              <div class="photo-box" style="height: 200px;">
-                <img src="https://static.igem.wiki/teams/5167/education4.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education5.png" alt="">
-              </div>
-              <p style="text-align:right; font-size: 12px;"></p>
-              <h4 id='1.5'></h4>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education6.png" alt="">
-              </div>
-    
-              <h4 id="1.6">Part II visit the laboratory</h4>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education7.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education8.png" alt="">
-              </div>
-              <p>
-
-              </p>
-    
-              <h4 id="1.7">Part III workshop experience</h4>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education9.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education10.png" alt="">
-              </div>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education11.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education12.png" alt="">
-              </div>
-              <p style="text-align: right; font-size: 12px;"></p>
-              <p>
-
-              </p>
-              <h4 id="1.8">Purpose</h4>
-              <p>
-                
-              <br>
-              <p>
-
-              </p>
-              <p>
-
-              </p>
-              <div class="photo-box" style="height: 400px;">
-                <img src="https://static.igem.wiki/teams/5167/education13.png" alt="">
-              </div>
-              
-    
-              <h3 id="1.9">Children's day science park party on June 1</h3>
-              <p>
-
-    
-              </p>
-              <div class="photo-box" style="height: 200px;">
-                <img src="https://static.igem.wiki/teams/5167/education14.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education15.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education16.png" alt="">
-              </div>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education17.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education18.png" alt="">
-              </div>
-    
-              <h3 id="1.91">Participants and teamwork</h3>
-    
-              <p>
+            1) Analysis: Reading and summarizing the wiki of the award-winning teams in 2023, highlighting the bright points of their work, and consulting relevant literatures on metabolomics, genomics, and proteomics related to polyploid rice, lysine, glutelin, and globulin.  <br>
+            2) Conceptualization: Organizing brainstorming sessions for team members on average monthly, proposing and planning research, education, inclusiveness, and communication and cooperation activities. 
+            3) Background Research: Looking up Chinese regulations on transgenics and gene editing and iGEM policies. <br>
+            4) Investigation: Participating in mutant identification and nutritional quality verification experiments.  <br>
+            5) Notebook/record keeping: Sorting out the experimental records of the whole process of experimental design, adjustment, and verification. <br>
+            6)  Project Administration: Coordinating the experimental groups, HP group, art design group, wiki group within the team, maintaining close communication with teachers and communicating with other teams. <br>
+            7) Public Engagement: Independently planning community lectures, planning and fully participating in the Synthetic Biology Popularization Month, taking the lead in organizing two iGEM teams from Hubei University to participate in the 2024 Wuhan Seed Industry Exposition, and participating in the summer volunteer teaching activities. <br>
+            8) Visualization: Displaying the project and making diagrams to explain the project experiments. <br>
+            9) Writing: Compiling all the wiki materials of the experimental part of the project and revising all the project wiki materials.  <br>
+            10) Safety: After communicating with PIs, advisors, the safety committee, and off-campus experts, filling in the safety forms, and evaluating the project risks after comparing with relevant national laws, regulations, and policies. <br>
+          </p>
+        </div>
+      </div>
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Yangyu He
+          </h2>
+          <h3>
+            STUDENT LEADER
+          </h3>
+          <p><strong>Tasks:</strong>
+            Conceptualization, Background Research, Investigation, Project Administration, Public Engagement, Writing.
+          </p>
+          <p><strong>Specific Tasks:</strong>
             
-              </p>
-    
-              <h3 id="1.92"></h3>
-              <p>
-                      
-              </p>
-    
-            <h2 id="section2"></h2>
-              <p>
+            1) Conceptualization: Providing ideas for selecting the best HP individual item. <br>
+            2) Background Research and investigation: Investigating aspects such as the sales volume of rice in China. <br>
+            3) Project Administration: Being responsible for the activities and work arrangements of the HP group; connecting with the leaders in Xinhu Village.; participating in the rural revitalization conference in Huazhong Agricultural University; participating in the seed exposition. <br>
+            4) Public Engagement: Organizing and participating in the laboratory open day and bio-art exhibition activities; planning and arranging the volunteer teaching activities in Xinhucun. <br>
+            5) Writing: Writing the news drafts published in the graduate school; writing the volunteer teaching diaries; writing the education part in the Wiki.<br>
 
-              </p>
-              <div class="photo-box" style="height: 500px;" >
-                <img src="https://static.igem.wiki/teams/5167/education19.png" alt="">
-              </div>
-              <div class="photo-box" style="height: 210px;">
-                <img src="https://static.igem.wiki/teams/5167/education20.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education21.png" alt="">
-              </div>
-            <h2 id="section3">Volunteer Teaching</h2>
-              <p>
+          </p>
+        </div>
+      </div>
 
-              </p>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education22.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education23.png" alt="">
-              </div>
-              <p>
- <br>
-              </p>
-              <div class="photo-box" style="height: 300px;">
-                <img src="https://static.igem.wiki/teams/5167/education24.png" alt="">
-              </div>
-              <div class="photo-box" style="height: 400px;">
-                <img src="https://static.igem.wiki/teams/5167/education25.png" alt="">
-              </div>
-              
-    
-    
-              <p>
-              
-                <br>
-              </p>
-    
-            <h2 id="section4">Lectures</h2>
-              <div class="photo-box" >
-                <img src="https://static.igem.wiki/teams/5167/education26.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education27.png" alt="">
-              </div>
-              <p>
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Weilin Wang
+          </h2>
+          <h3>
+            STUDENT LEADER
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Investigation, 
+            Notebook/record keeping.
 
-              </p>
-              <div class="photo-box">
-                <img src="https://static.igem.wiki/teams/5167/education28.png" alt="">
-                <img src="https://static.igem.wiki/teams/5167/education29.png" alt="">
-              </div>
-              <p>
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+            
+            1) Investigation: Popularize knowledge about genetically modified rice to the public and understand the public's acceptance level of genetically modified foods. At the same time, conduct research on the laboratory whitelist to understand which experiments conform to the specifications.<br>
+            2)  Notebook/record keeping: Screen the mutation sites of experimental materials, record each piece of experimental data, and save each experimental record.<br>
 
-              </p>
-    
-    
-    
-    
-    
-    
-                    
-          </div>  
-          
-          
-          <a href="#head" class="to-top">back to top</a>  
-          <hr class="end-line" style="width: 80%; align-items: center;">
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Siwei Liu
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Project Administration, Public Engagement, Hardware, Conceptualization, Investigation,  Wiki Coding, Writing, Visualization,Notebook/record keeping.
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+            1) Project Administration: Assist the HP group and the Wiki group, maintain close contact with team members. <br>
+            2) Public Engagement: Propose and formulate the planning proposal for biological art activities which is approved, and host and complete the activities of the biological art exhibition. Participate in the Synthetic Biology Popular Science Month, plan and participate in the Laboratory Open Day, assist the HP group in participating in the research of the polyploidy company, participate in the 2024 Wuhan Seed Expo, and participate in rural teaching support activities. <br>
+            3) Hardware: Design team posters, team uniforms, team emblems, two-minute popular science videos, team cultural and creative products, optimize the mascot, design the invitation letter for the Hecheng Biology Conference, and design the cultural and creative products for Jingchu Grain and Oil. <br>
+            4) Conceptualization: Propose the team cooperation self-study day, and hold meetings every week to allocate and check the tasks of the art design work. <br>
+            5) Investigation: Investigate the sales volume of Chinese fragrant rice. <br>
+            6) Notebook/record keeping: Organize and save the meeting records and recordings of each online meeting. <br>
+            7) Wiki Coding: Assist in participating in the design and beautification of the Wiki webpage. <br>
+            8) Writing: Organize the teaching support summary and the report of the Shenzhen Biological Art Lecture. <br>
+            9) Visualization: Draw for the two-minute popular science video and edit the fifteen-minute promotional video.<br>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Zhixin JIa
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Wiki Coding, Visualization, Writing, Public Engagement.<br>
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+            (1)Wiki coding: As the main team responsible for the compilation of wiki code. <br>
+            (2)Visualization: Responsible for wiki style design and beautification, and making visual tables of questionnaire data.<br>
+            (3)Writing: reviewed and filled in the wiki text content, compiled some materials for popular science exhibition and the communication content of wechat public account.<br>
+            (4) Public participation: Responsible for the venue layout and hosting of the opening ceremony of laboratory Open Day activities; The team booth of popular science art exhibition;Publish questionnaires on GoogleForm and questionnaire scale platforms and collect questionnaire data<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Yufei Wang
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Visualization,Public Engagement,Conceptualization.
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+
+            1) Public Engagement: Conduct volunteer teaching activities and conduct offline promotional lectures. <br>
+            2) Conceptualization: Provide new ideas and thoughts for the team's art designers.<br>
+            3)  Visualization: Participate in the design and production of the Wiki, design the overall style, participate in the design of the team uniform, and participate in the design of the two-minute promotional video.<br>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Yufan Cheng
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Background Research, Conceptualization, Project Administration, Public Engagement, 
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+            
+            1) Background Research: Investigating the planting, nutrition, and sales situations of various Japanese rice varieties. <br>
+            2) Conceptualization: Participating in the planning of activities such as laboratory open days. <br>
+            3) Project Administration: Being responsible for managing the online sections of various activities and the recruitment and organization of volunteers. <br>
+            4) Public Engagement: Using methods like the second classroom to publicize projects or activities.<br>
+            5)  Writing: Summarizing and compiling written materials for the laboratory open day activities and enterprise research activities, and designing and writing interview drafts and questionnaires for foreign teachers. <br>
+            6) Safety: Conducting laboratory safety training for the laboratory open day activities.<br>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Xinyu Wu
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Analysis, Conceptualization, Background Research, Investigation, Project Administration, Writing, Visualization.
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+            
+            1) Analysis: In terms of experiments, searching for and analyzing useful information for the project from literature. <br>
+            2) Conceptualization: Putting forward some of my own insights regarding experiments, also providing some ideas in research investigations, and participating in brainstorming during the competition in Shenzhen. <br>
+            3) Background Research: Reading some articles to provide the background of rice and participating in the market research of rice sales during the winter vacation. <br>
+            4) Investigation: Searching for useful information in relevant literature, such as the relationship between lysine and glutelin, etc. <br>
+            5) Project Administration: Participating in some job responsibilities like those of the laboratory open day. Participating in the research investigations of multiple companies during the summer vacation.<br>
+            6)  Writing: Participating in editing multiple materials related to hp and participating in editing the script of a 15-minute video, etc. <br>
+            7) Visualization: Sorting out and redrawing the Crisper/cas9 framework of the experiment.<br>
+
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Zihao Zhou
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Investigation,Conceptualization,
+            Public Engagement, Project Administrationn, Background Research, Writing, Safety.
+
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+            1) Investigation: Investigated relevant information about Indian rice varieties and conducted research work in a polyploid company. <br>
+            2) Conceptualization: Created scripts for shooting videos and participated in the planning of the laboratory safety day. <br>
+            3) Public Engagement: Carried out volunteer teaching activities, conducted online laboratory safety training for participants, and participated in offline publicity work. <br>
+            4) Project Administration: Organized relevant materials and participated in the organization and management of various activities. <br>
+            5) Background Research: Searched for outstanding works of previous competitions on websites and applied them to the writing of video scripts.  <br>
+            6) Writing: Reported on activities and completed the scripts for comics and videos. <br>
+            7) Safety: Conducted safety training activities for the laboratory open day.<br>
+
+          </p>
+        </div>
+      </div>
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Xinyi Wei
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Survey,Project Administration,Conceptualization,Writing, Visualization,public Engagement.
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+
+            1) Survey: collect big data on the praise rate and composition of all kinds of rice and rice paste products in the market.<br>
+            2) Project Administration: participate in the large-scale activities of the planning team's June 1st Children's Day Biological Art and Laboratory Open Day.<br>
+            3) Conceptualization: Provide ideas for the formulation of the project.<br>
+            4) Writing: Write summary materials for the usual team's activities, such as teaching, competitions, etc., and make them into tweets to send; and the writing of popular science comic scripts.<br>
+            5) Visualization: post-editing of videos taken by the team, speech competitions,synthetic biology innovation competitions and other video post-editing, team emblem design.<br>
+            6)  public Engagement:publicize and explain the team activities prepared on the Internet, so that more people know the activities we want to do.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Kai Yang
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong><br>
+            Background Research, Conceptualization, Investigation, Writing, Visualization, Projec<br>t Administration.
+          </p>
+          <p><strong>Specific Tasks:</strong><br>
+            1) Background research: Querying the consumption range of rice globally and researching the public's attitude towards transgenic technology. <br>
+            2) Project Administration: Responsible for coordinating the analysis of public opinion on transgenic, responsible for speech contests, the management and operation of the official account, and some reporting work. <br>
+            3) Writing: Responsible for writing speech drafts and the writing of materials such as CCIC, seed exposition, speech contests, and synthetic biology open conferences in the Wiki materials. Partial writing and overall revision of the script of the promotional video.<br>
+            4)  Visualization: Including the data analysis of online sales products of rice, the data analysis of public opinion on transgenic technology, and making the project visualized by creating reporting PPTs. <br>
+            5) Conceptualization: Providing ideas for the progress of the HP work. <br>
+            6) Investigation: Participating in collecting public opinion data.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Chenxi Zhu
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Visualization, Analysis, Creation of works, Team logo Design, Image and icon design.
+          </p>
+          <p><strong>Specific Tasks:</strong>
+
+            1) Visualization: Prepare, create and display works, convert text into images. <br>
+            2) Analysis: Extract the required elements from the text requirements and the general direction of drawing.<br>
+            3)  Create Works: Use relevant software to draw the required images and graphics. <br>
+            4) Team Logo Design: Includes team badge design, logo design, and mascot design, etc. <br>
+            5) Image and Icon Design: Extract information from existing requirements and design exclusive images and icons for the team, such as the related peripherals of the biological art exhibition and easy-to-understand comic strips required for promotion.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Qingni Xue
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Project Administration,Public Engagement,Investigation,Analysis,Writing.
+          </p>
+          <p><strong>Specific Tasks:</strong>
+            1）Project Administration: helped to complete the rice milk planning case for the elderly and the environmental engineering 2023 publicity planning case for public<br>
+            2）Public Engagement: planned and presided over the completion of environmental engineering 2023 publicity and Qingchuan Senior High School science popularization publicity activities. Participated in volunteer teaching.<br>
+            3）Investigation: participated in the construction and distribution of a number of rice knowledge and understanding questionnaires, collected information, and personally conducted a survey on rice sales in the market in Wushang supermarket and compiled the table. <br>
+            4）Analysis:During the winter vacation, I learned the excellent works of previous iGEM competitions and summarized them into a table. <br>
+            5）Writing: Completed a number of team event tweets and promotional articles<br>            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Ke Chen
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Writing,Conceptualization
+            Project Administration,
+            Public Engagement,
+            Visualization.
+            
+          </p>
+          <p><strong>Specific Tasks:</strong>
+            
+            1) Writing: writing articles for official accounts on WeChat.
+            2) Public Engagement: participating in the volunteer teaching activities during the summer vacation and attending the online and offline conferences of iGEM.<br>
+            3) Visualization: fulfilling part of the tasks in the art design team during the winter vacation.<br>
+            4) Investigation: interviewing the large rice growers in Hunan Province.<br>
+            5) Analysis: studying the outstanding works of previous iGEM competitions during the winter vacation and summarizing them into a table.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Qianhe Jian
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Writing,Public Engagement.
+            
+          </p>
+          <p><strong>Specific Tasks:</strong>
+
+            1) Writing: Compose and revise news drafts, and write the contribution and cooperation sections in the Wiki. <br>
+            2) Public Engagement: Contact foreign college students to participate in the team's activities.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Yifan Jv
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Wiki Coding,Writing,Visualization,Public Engagement.
+          </p>
+          <p><strong>Specific Tasks:</strong>
+
+            1) Wiki Coding: Use HTML, CSS, and JavaScript to improve the initial structure of the team's Wiki.<br>
+            2)   Visualization: Be responsible for the design and beautification of the Wiki's style. <br>
+            3) Writing: Review and fill in the text content of the Wiki. <br>
+            4) Public Engagement: Be responsible for the venue layout of the opening ceremony of the laboratory open day activities; and the publicity layout of the exhibition booth of the popular science art exhibition team.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Yuxiang Zhang
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Wiki Coding, Visualization, Software, Public Engagement.
+          </p>
+          <p><strong>Specific Tasks:</strong>
+
+            1) Wiki Coding: Use HTML, CSS, and JavaScript to improve the initial structure of the team's Wiki. <br>
+            2) Visualization: Be responsible for the style design and beautification of the Wiki. Be responsible for connecting with the art designer and the data of the Wiki group.<br>
+            3)  Software: Test, modify, and maintain the Wiki website. <br>
+            Public Engagement: By assisting friends from various countries in sharing our questionnaire abroad and inviting foreign friends to fill it out to obtain relevant data.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Tao Song
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Investigation, Notebook/record keeping.
+          </p>
+          <p><strong>Specific Tasks:</strong>
+
+            1) Investigation: Carry out publicity activities through multiple channels and in various forms to popularize knowledge about genetically modified rice and related information among the public. At the same time, collect the public's acceptance level and views on genetically modified foods (especially genetically modified rice) through methods such as questionnaires and interviews, so as to better understand the public's needs and concerns and provide directions for subsequent popular science work.<br>
+            2) Notebook/record keeping: Conduct relevant experimental operations and records, screen relevant materials, and record data for each time in notebooks.<br>
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Liushang He
+          </h2>
+          <h3>
+            STUDENT
+          </h3>
+          <p><strong>Tasks:</strong>
+            Investigation,Notebook/record keeping.
+          </p>
+          <p><strong>Specific Tasks:</strong>
+
+            1) Investigation: Popularize knowledge about genetically modified rice to the public and understand the public's acceptance level of genetically modified foods. At the same time, conduct research on the laboratory whitelist to understand which experiments conform to the specifications.<br>
+            2) Notebook/record keeping:<br>
+            Screen the mutation sites of experimental materials, record each piece of experimental data, and preserve each experimental record.<br>
+            
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <h1>2. External Contributions</h1>
+    <div class="attributions-cards" style="width: 100%; display: flex;   flex-wrap: wrap;">
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <p>
+            1）The Chinese Society for Cell Biology<br>
+            2）The Hubei Society for Cell Biology<br>
+            3）The State Key Laboratory of Biocatalysis and Enzyme Engineering jointly built by the province and the ministry<br>
+            4）The School of Life Sciences of Hubei University<br>
+            Institution Type：Academic<br>
+            Relationship to Team: External Advisor<br>
+
+          </p>
+          <p><strong>Tasks:</strong>
+            Conceptualization
+          </p>
+          <p><strong>Specific Tasks:</strong>
+            Help carry out the Synthetic Biology Popular Science Month.
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <p>
+            1)	Wuhu Rice Technology Courtyard in Hubei<br>
+            2)	The Datan Office of the Changjiang New Area in Wuhan, Hubei<br>
+            Institution Type:Industry<br>
+            Relationship to Team: Collaborator<br>
+
+
+          </p>
+
+          <p><strong>Tasks:</strong>
+            Public Engagement
+          </p>
+          <p><strong>Specific Tasks:</strong>
+            Help carry out the teaching support activities.
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <p>
+            The Liu Yaoguang Research Group of South China Agricultural University<br>
+            Institution Type: Academic<br>
+            Relationship to Team: Collaborator<br>
+          </p>
+
+          <p><strong>Tasks:</strong>
+            background study,Conceptualization
+          </p>
+          <p><strong>Specific Tasks:</strong>
+            Authorize us to use the CRISPR/Cas9 binary vector.
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <p>
+            Director Chen Weizhao of Shenzhen University<br>
+            Institution Type Academic<br>
+            Relationship to Team:External Advisor<br>
+          </p>
+
+          <p><strong>Tasks:</strong>
+            Conceptualization
+          </p>
+          <p><strong>Specific Tasks:</strong>
+             Has had many online exchanges with us about the project and provided improvement Specific tasks: Has had many online exchanges with us about the project and provided improvement suggestions.
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <p>Lai Zhou<br>
+            Institution Type: Industry<br>
+            Relationship to our Team:External Advisor<br>
+             </p>
+
+          <p><strong>Tasks:</strong>
+            Research
+          </p>
+          <p><strong>Specific Tasks:</strong>
+            Help us understand the current forms of rural rice farming and provide suggestions for our experimental projects to move towards the society.<br>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <h1>3. Timeline</h1>
+    <div class="attributions-cards" style="width: 100%; display: flex;   flex-wrap: wrap;">
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Building the Team wiki
+          </h2>
+
+          <p><strong>Start:</strong>
+            2023 December 21th
+          </p>
+          <p><strong>End:</strong>
+            2024 September 10th
+          </p>
+          <p><strong>Total Time:</strong>
+            39 weeks 
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Dry Laboratory Activities
+          </h2>
+
+          <p><strong>Start:</strong>
+            2023 December 21th
+          </p>
+          <p><strong>End:</strong>
+            2024 August 10th
+          </p>
+          <p><strong>Total Time:</strong>
+            36 weeks
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Wet Laboratory Activities
+          </h2>
+
+          <p><strong>Start:</strong>
+            2023 December 21th
+          </p>
+          <p><strong>End:</strong>
+            2024 September 10th
+          </p>
+          <p><strong>Total Time:</strong>
+            39 weeks
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Recruit Team Members
+          </h2>
+
+          <p><strong>Start:</strong>
+            2023 December 21th
+          </p>
+          <p><strong>End:</strong>
+            2024 April 6th
+          </p>
+          <p><strong>Total Time:</strong>
+            14 weeks
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Development of Project Plan
+          </h2>
+
+          <p><strong>Start:</strong>
+            2024 January 17th
+          </p>
+          <p><strong>End:</strong>
+            2024 July 29th
+          </p>
+          <p><strong>Total Time:</strong>
+            34 weeks
+          </p>
+        </div>
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+
+          </h2>
+
+          <p><strong>Start:</strong>
+            
+          </p>
+          <p><strong>End:</strong>
+
+          </p>
+          <p><strong>Total Time:</strong>
+
+          </p>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <h1>4. Specific project timeline </h1>
+    <div class="attributions-cards" style="width: 100%; display: flex;   flex-wrap: wrap;">
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>Dry Laboratory Activities </h2>
 
           <p>
-            How to make it easy for children to understand synthetic biology does not seem to be a difficult problem for 
-            students at Hubei University. With the collaboration of students majoring in biotechnology and art, a brilliant 
-            fusion of biology and art has been initiated, and the concept of synthetic biology is fully demonstrated at this 
-            moment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet animi mollitia maxime, minus dignissimos 
-            hic exercitationem ut soluta ipsam veritatis sequi quod temporibus eaque itaque optio vitae accusantium? Quas,
-            voluptas! <br>
+            1) In 2024 February, the team carried out preliminary market research and popular science publicity in Hubei, Hunan, Guangdong, Guizhou and Shandong. <br>
+            2) In 2024 March, the team leader, He Yangyu, represented the team to participate in the Hubei Rural Planning Research Association.<br>
+            3) In 2024 April, together with the other three iGEM teams of Hubei University, the team organized and participated in the Hubei Synthetic Biology Open Conference.<br>
+            4) In 2024 May, the team participated in two speech contests, namely "Reading at Hubei University, Forging Ahead in a New Journey" and the "Hundred Students' Lecture Forum", and won two bronze medals. <br>
+            5) In 2024 June, the team participated in the 2024 Wuhan Seed Industry Expo and held the Carnival of the Synthetic Biology Popular Science Month. <br>
+            6) In 2024 July, at the beginning of the month, the team went to Suzhou to participate in the CCiC communication conference and at the end of the month, went to the Wuhu Rice Technology Courtyard in Hubei to conduct teaching support activities. <br>
+            7) In 2024 August, the team went to Shenzhen to participate in the final of the Synthetic Biology Challenge. <br>
+
+            
+          </p>
+
         </div>
-    
+      </div>
+
+      <div class="att-card">
+        <div style="margin-left: 15px;">
+          <h2>
+            Wet Laboratory Activities
+          </h2>
+
+          <p>
+
+          </p>
+        </div>
       </div>
     
     </div>
+
+
   </div>
 
-  
 
-  
-</body>  
+</body>
 </html>
-<script>
-  //文章页面侧边栏固定
-  function makeElementSticky(elementClass) {
-    var element = document.querySelector(elementClass);
-    if (!element) return;
-
-    var offsetTop = element.offsetTop;
-
-    window.addEventListener('scroll', function() {
-      var mainText = document.querySelector('.main-text');
-      var totop = document.querySelector('.to-top');
-      var endLineElement = document.querySelector('.end-line');
-      var headcontainer = document.querySelector('.header-container');
-
-      var headhigh = headcontainer.offsetHeight;
-      var endsetTop = endLineElement.offsetTop - element.offsetHeight;
-
-      element.style.top = '';
-
-      if (window.pageYOffset > offsetTop && window.pageYOffset <= endsetTop) {
-        element.classList.add('fixed');
-        mainText.classList.add('fixed');
-        totop.classList.add('show');
-        element.classList.remove('down');
-
-      } else if (window.pageYOffset > endsetTop) {
-        element.classList.remove('fixed'); 
-        element.classList.add('down');
-        element.style.top = (endsetTop - headhigh - 40) + 'px';
-        mainText.classList.remove('fixed');
-        totop.classList.remove('show'); 
-      } else {
-        element.classList.remove('fixed');
-        element.classList.remove('down');
-        mainText.classList.remove('fixed')
-        element.style.top = '';
-        totop.classList.remove('show');
-      }
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function() {
-    makeElementSticky('.sidebar');
-  });
-
-
-  </script> 
-  
-
-
-{% extends "layout.html" %}
-{% block page_content %}
-{% endblock %}

@@ -5,27 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="style1.css">
     <title>Responsive Navbar</title>
 </head>
 
+<script>
+
+
+// 监听滚动事件
+document.addEventListener('DOMContentLoaded', function() {
+  var hangingContainer = document.querySelector('.hanging-container');
+  var menuContainer = document.querySelector('.menu');
+  var triggerDistance = window.innerHeight; // 触发动画的视窗高度
+
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > triggerDistance) {
+      // 页面滚动超过一个视窗高度时，显示悬挂容器并触发下落动画
+      hangingContainer.classList.add('show');
+      menuContainer.classList.add('die');
+
+    } else {
+      // 页面滚动未超过视窗高度时，隐藏悬挂容器
+      hangingContainer.classList.remove('show');
+      menuContainer.classList.remove('die');
+
+    }
+  });
+});
+</script>
+
 <body>
-    <header>
+    <header class="menu">
         <div class="menu-container">
             <input type="checkbox" name="" id="check">
             
             <div class="logo-container">
-                <h3 class="logo">Brand<span>Name</span></h3>
+                <a href="" style="color: #fff;"><p>HUBU-WUCHANG-China</p></a>
             </div>
 
             <div class="nav-btn">
                 <div class="nav-links">
                     <ul>
-                        <li class="nav-link" style="--i: .6s">
-                            <a href="{{ url_for('home') }}">Home</a>
-                        </li>
-                        <li class="nav-link" style="--i: .85s">
+                        <li class="nav-link" style="--i: .7s">
                             <a href="{{ url_for('pages', page='team') }}">Team<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown">
                                 <ul>
@@ -48,7 +70,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-link" style="--i: .85s">
+                        <li class="nav-link" style="--i: .8s">
                             <a href="{{ url_for('pages', page='description') }}">Project<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown">
                                 <ul>
@@ -73,7 +95,7 @@
                             </div>
                         </li>
                         
-                        <li class="nav-link" style="--i: .85s">
+                        <li class="nav-link" style="--i: .9s">
                             <a href="{{ url_for('pages', page='wet-lab') }}">Wet lab<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown">
                                 <ul>
@@ -100,11 +122,11 @@
                             </div>
                         </li>
 
-                        <li class="nav-link" style="--i: 1.35s">
+                        <li class="nav-link" style="--i: 1s">
                             <a href="{{ url_for('pages', page='model') }}">Model</a>                        
                         </li>
 
-                        <li class="nav-link" style="--i: .85s">
+                        <li class="nav-link" style="--i: 1.1s">
                             <a href="{{ url_for('pages', page='human-practices') }}">Human Practices<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown">
                                 <ul>
@@ -136,6 +158,11 @@
             </div>
         </div>
     </header>
+
+    <div class="hanging-container">
+      <hr class="rope">
+      <a href="#head"><img src="https://static.igem.wiki/teams/5167/bunchrice.png" alt=""></a>
+  </div>
 
 
     <div class="header-container" id="head">
